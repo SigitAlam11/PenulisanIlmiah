@@ -5,7 +5,7 @@
        <span class="navbar-toggler-icon"></span>
      </button>
      <div class="collapse navbar-collapse" id="navbarResponsive">
-       <ul class="navbar-nav ml-auto">
+       <ul class="navbar-nav ms-auto">
          <li class="nav-item">
            <a class="nav-link" href="about-us.php">About</a>
          </li>
@@ -15,8 +15,6 @@
          <li class="nav-item">
            <a class="nav-link" href="contact-us.php">Contact us</a>
          </li>
-
-
        </ul>
      </div>
    </div>

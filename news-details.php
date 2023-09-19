@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
   <title>News Portal | Home Page</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
@@ -70,7 +70,7 @@ if (isset($_POST['submit'])) {
         while ($row = mysqli_fetch_array($query)) {
         ?>
 
-          <div class="card mb-4">
+          <div class="card">
 
             <div class="card-body">
               <h2 class="card-title"><?php echo htmlentities($row['posttitle']); ?></h2>
@@ -106,23 +106,23 @@ if (isset($_POST['submit'])) {
     <!-- /.row -->
     <!---Comment Section --->
 
-    <div class="row" style="margin-top: -8%">
+    <div class="row">
       <div class="col-md-8">
         <div class="card my-4">
           <h5 class="card-header">Leave a Comment:</h5>
           <div class="card-body">
             <form name="Comment" method="post">
               <input type="hidden" name="csrftoken" value="<?php echo htmlentities($_SESSION['token']); ?>" />
-              <div class="form-group">
+              <div class="form-group mb-2">
                 <input type="text" name="name" class="form-control" placeholder="Enter your fullname" required>
               </div>
 
-              <div class="form-group">
+              <div class="form-group mb-2">
                 <input type="email" name="email" class="form-control" placeholder="Enter your Valid email" required>
               </div>
 
 
-              <div class="form-group">
+              <div class="form-group mb-2">
                 <textarea class="form-control" name="comment" rows="3" placeholder="Comment" required></textarea>
               </div>
               <button type="submit" class="btn btn-primary" name="submit">Submit</button>
@@ -159,7 +159,7 @@ if (isset($_POST['submit'])) {
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
