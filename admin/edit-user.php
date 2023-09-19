@@ -23,7 +23,7 @@ if (strlen($_SESSION['login']) == 0) {
     }
 
 
-    ?>
+?>
 
 
     <!DOCTYPE html>
@@ -100,99 +100,92 @@ if (strlen($_SESSION['login']) == 0) {
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <!---Success Message--->
-                                        <?php if ($msg) { ?>
-                                        <div class="alert alert-success" role="alert">
-                                            <strong>Well done!</strong>
-                                            <?php echo htmlentities($msg); ?>
+                                            <?php if ($msg) { ?>
+                                                <div class="alert alert-success" role="alert">
+                                                    <strong>Well done!</strong>
+                                                    <?php echo htmlentities($msg); ?>
+                                                </div>
+                                            <?php } ?>
+
+                                            <!---Error Message--->
+                                            <?php if ($error) { ?>
+                                                <div class="alert alert-danger" role="alert">
+                                                    <strong>Oh snap!</strong>
+                                                    <?php echo htmlentities($error); ?>
+                                                </div>
+                                            <?php } ?>
+
+
                                         </div>
-                                        <?php } ?>
-
-                                        <!---Error Message--->
-                                        <?php if ($error) { ?>
-                                        <div class="alert alert-danger" role="alert">
-                                            <strong>Oh snap!</strong>
-                                            <?php echo htmlentities($error); ?>
-                                        </div>
-                                        <?php } ?>
-
-
                                     </div>
-                                </div>
 
-                                <?php
+                                    <?php
 
 
-                                $catid = $_GET['cid'];
-                                $query = mysqli_query($con, "Select * FROM  tbladmin where id=$catid ");
-                                $cnt = 1;
-                                while ($row = mysqli_fetch_array($query)) {
+                                    $catid = $_GET['cid'];
+                                    $query = mysqli_query($con, "Select * FROM  tbladmin where id=$catid ");
+                                    $cnt = 1;
+                                    while ($row = mysqli_fetch_array($query)) {
 
                                     ?>
 
 
 
 
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <form class="form-horizontal" name="AdminUserName" method="post">
-                                            <div class="form-group">
-                                                <label class="col-md-2 control-label">Username</label>
-                                                <div class="col-md-10">
-                                                    <input type="text" class="form-control"
-                                                        value="<?php echo htmlentities($row['AdminUserName']); ?>"
-                                                        name="AdminUserName" required>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <form class="form-horizontal" name="AdminUserName" method="post">
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label">Username</label>
+                                                        <div class="col-md-10">
+                                                            <input type="text" class="form-control" value="<?php echo htmlentities($row['AdminUserName']); ?>" name="AdminUserName" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label">Email</label>
+                                                        <div class="col-md-10">
+                                                            <input type="text" class="form-control" value="<?php echo htmlentities($row['AdminEmailId']); ?>" name="AdminEmailId" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label">Password</label>
+                                                        <div class="col-md-10">
+                                                            <input type="text" class="form-control" value="" name="AdminPassword" required>
+                                                        </div>
+                                                    </div>
+                                                <?php } ?>
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">&nbsp;</label>
+                                                    <div class="col-md-10">
+
+                                                        <button type="submit" class="btn btn-custom waves-effect waves-light btn-md" name="submit">
+                                                            Update
+                                                        </button>
+                                                    </div>
                                                 </div>
+
+                                                </form>
                                             </div>
 
-                                            <div class="form-group">
-                                                <label class="col-md-2 control-label">Email</label>
-                                                <div class="col-md-10">
-                                                    <input type="text" class="form-control"
-                                                        value="<?php echo htmlentities($row['AdminEmailId']); ?>"
-                                                        name="AdminEmailId" required>
-                                                </div>
-                                            </div>
 
-                                            <div class="form-group">
-                                                <label class="col-md-2 control-label">Password</label>
-                                                <div class="col-md-10">
-                                                    <input type="text" class="form-control" value=""
-                                                        name="AdminPassword" required>
-                                                </div>
-                                            </div>
-                                            <?php } ?>
-                                            <div class="form-group">
-                                                <label class="col-md-2 control-label">&nbsp;</label>
-                                                <div class="col-md-10">
+                                        </div>
 
-                                                    <button type="submit"
-                                                        class="btn btn-custom waves-effect waves-light btn-md"
-                                                        name="submit">
-                                                        Update
-                                                    </button>
-                                                </div>
-                                            </div>
 
-                                        </form>
-                                    </div>
+
+
+
+
+
+
+
 
 
                                 </div>
-
-
-
-
-
-
-
-
-
-
-
                             </div>
                         </div>
-                    </div>
-                    <!-- end row -->
+                        <!-- end row -->
 
 
                     </div> <!-- container -->

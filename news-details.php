@@ -1,166 +1,166 @@
-<?php 
+<?php
 session_start();
 include('includes/config.php');
 //Genrating CSRF Token
 if (empty($_SESSION['token'])) {
- $_SESSION['token'] = bin2hex(random_bytes(32));
+  $_SESSION['token'] = bin2hex(random_bytes(32));
 }
 
-if(isset($_POST['submit']))
-{
+if (isset($_POST['submit'])) {
   //Verifying CSRF Token
-if (!empty($_POST['csrftoken'])) {
+  if (!empty($_POST['csrftoken'])) {
     if (hash_equals($_SESSION['token'], $_POST['csrftoken'])) {
-$name=$_POST['name'];
-$email=$_POST['email'];
-$comment=$_POST['comment'];
-$postid=intval($_GET['nid']);
-$st1='0';
-$query=mysqli_query($con,"insert into tblcomments(postId,name,email,comment,status) values('$postid','$name','$email','$comment','$st1')");
-if($query):
-  echo "<script>alert('comment successfully submit. Comment will be display after admin review ');</script>";
-  unset($_SESSION['token']);
-else :
- echo "<script>alert('Something went wrong. Please try again.');</script>";  
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+      $comment = $_POST['comment'];
+      $postid = intval($_GET['nid']);
+      $st1 = '0';
+      $query = mysqli_query($con, "insert into tblcomments(postId,name,email,comment,status) values('$postid','$name','$email','$comment','$st1')");
+      if ($query) :
+        echo "<script>alert('comment successfully submit. Comment will be display after admin review ');</script>";
+        unset($_SESSION['token']);
+      else :
+        echo "<script>alert('Something went wrong. Please try again.');</script>";
 
-endif;
-
-}
-}
+      endif;
+    }
+  }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>News Portal | Home Page</title>
+  <title>News Portal | Home Page</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
 
-    <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- Navigation -->
-   <?php include('includes/header.php');?>
+  <!-- Navigation -->
+  <?php include('includes/header.php'); ?>
 
-    <!-- Page Content -->
-    <div class="container">
+  <!-- Page Content -->
+  <div class="container mt-3">
 
 
-     
-      <div class="row" style="margin-top: 4%">
 
-        <!-- Blog Entries Column -->
-        <div class="col-md-8">
+    <div class="row">
 
-          <!-- Blog Post -->
-<?php
-$pid=intval($_GET['nid']);
- $query=mysqli_query($con,"select tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$pid'");
-while ($row=mysqli_fetch_array($query)) {
-?>
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
 
-          <div class="card mb-4">
-      
+        <!-- Blog Post -->
+        <?php
+        $pid = intval($_GET['nid']);
+        $query = mysqli_query($con, "select tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$pid'");
+        while ($row = mysqli_fetch_array($query)) {
+        ?>
+
+          <div class="card">
+
             <div class="card-body">
-              <h2 class="card-title"><?php echo htmlentities($row['posttitle']);?></h2>
-              <p><b>Category : </b> <a href="category.php?catid=<?php echo htmlentities($row['cid'])?>"><?php echo htmlentities($row['category']);?></a> |
-                <b>Sub Category : </b><?php echo htmlentities($row['subcategory']);?> <b> Posted on </b><?php echo htmlentities($row['postingdate']);?></p>
-                <hr />
+              <h2 class="card-title"><?php echo htmlentities($row['posttitle']); ?></h2>
+              <p><b>Category : </b> <a href="category.php?catid=<?php echo htmlentities($row['cid']) ?>"><?php echo htmlentities($row['category']); ?></a> |
+                <b>Sub Category : </b><?php echo htmlentities($row['subcategory']); ?> <b> Posted on </b><?php echo htmlentities($row['postingdate']); ?>
+              </p>
+              <hr />
 
- <img class="img-fluid rounded" src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>">
-  
-              <p class="card-text"><?php 
-$pt=$row['postdetails'];
-              echo  (substr($pt,0));?></p>
-             
+              <img class="img-fluid rounded" src="admin/postimages/<?php echo htmlentities($row['PostImage']); ?>" alt="<?php echo htmlentities($row['posttitle']); ?>">
+
+              <p class="card-text"><?php
+                                    $pt = $row['postdetails'];
+                                    echo (substr($pt, 0)); ?></p>
+
             </div>
             <div class="card-footer text-muted">
-             
-           
+
+
             </div>
           </div>
-<?php } ?>
-       
+        <?php } ?>
 
-      
 
-     
 
+
+
+
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+      <?php include('includes/sidebar.php'); ?>
+    </div>
+    <!-- /.row -->
+    <!---Comment Section --->
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card my-4">
+          <h5 class="card-header">Leave a Comment:</h5>
+          <div class="card-body">
+            <form name="Comment" method="post">
+              <input type="hidden" name="csrftoken" value="<?php echo htmlentities($_SESSION['token']); ?>" />
+              <div class="form-group mb-2">
+                <input type="text" name="name" class="form-control" placeholder="Enter your fullname" required>
+              </div>
+
+              <div class="form-group mb-2">
+                <input type="email" name="email" class="form-control" placeholder="Enter your Valid email" required>
+              </div>
+
+
+              <div class="form-group mb-2">
+                <textarea class="form-control" name="comment" rows="3" placeholder="Comment" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+            </form>
+          </div>
         </div>
 
-        <!-- Sidebar Widgets Column -->
-      <?php include('includes/sidebar.php');?>
-      </div>
-      <!-- /.row -->
-<!---Comment Section --->
+        <!---Comment Display Section --->
 
- <div class="row" style="margin-top: -8%">
-   <div class="col-md-8">
-<div class="card my-4">
-            <h5 class="card-header">Leave a Comment:</h5>
-            <div class="card-body">
-              <form name="Comment" method="post">
-      <input type="hidden" name="csrftoken" value="<?php echo htmlentities($_SESSION['token']); ?>" />
- <div class="form-group">
-<input type="text" name="name" class="form-control" placeholder="Enter your fullname" required>
-</div>
-
- <div class="form-group">
- <input type="email" name="email" class="form-control" placeholder="Enter your Valid email" required>
- </div>
-
-
-                <div class="form-group">
-                  <textarea class="form-control" name="comment" rows="3" placeholder="Comment" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-              </form>
-            </div>
-          </div>
-
-  <!---Comment Display Section --->
-
- <?php 
- $sts=1;
- $query=mysqli_query($con,"select name,comment,postingDate from  tblcomments where postId='$pid' and status='$sts'");
-while ($row=mysqli_fetch_array($query)) {
-?>
-<div class="media mb-4">
+        <?php
+        $sts = 1;
+        $query = mysqli_query($con, "select name,comment,postingDate from  tblcomments where postId='$pid' and status='$sts'");
+        while ($row = mysqli_fetch_array($query)) {
+        ?>
+          <div class="media mb-4">
             <img class="d-flex mr-3 rounded-circle" src="images/usericon.png" alt="">
             <div class="media-body">
-              <h5 class="mt-0"><?php echo htmlentities($row['name']);?> <br />
-                  <span style="font-size:11px;"><b>at</b> <?php echo htmlentities($row['postingDate']);?></span>
-            </h5>
-           
-             <?php echo htmlentities($row['comment']);?>            </div>
-          </div>
-<?php } ?>
+              <h5 class="mt-0"><?php echo htmlentities($row['name']); ?> <br />
+                <span style="font-size:11px;"><b>at</b> <?php echo htmlentities($row['postingDate']); ?></span>
+              </h5>
 
-        </div>
+              <?php echo htmlentities($row['comment']); ?>
+            </div>
+          </div>
+        <?php } ?>
+
       </div>
     </div>
-
-  
-      <?php include('includes/footer.php');?>
+  </div>
 
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <?php include('includes/footer.php'); ?>
 
-  </body>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 
 </html>

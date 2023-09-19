@@ -18,16 +18,12 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/produk.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/produk.css">
     <link rel="icon" href="assets/images/image 1.png" type="image/x-icon">
     <link rel="shortcut icon" href="assets/images/image 1.png" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
@@ -48,14 +44,13 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
         <div class="row">
             <?php
             while ($row = mysqli_fetch_assoc($query)) {
-                ?>
+            ?>
                 <!-- Product -->
                 <div class="col-md-12 mb-4">
                     <div class="product-item">
                         <div class="row">
                             <div class="col-md-6">
-                                <div id="<?php echo $carouselID; ?>" class="carousel slide product-image"
-                                    data-bs-ride="carousel">
+                                <div id="<?php echo $carouselID; ?>" class="carousel slide product-image" data-bs-ride="carousel">
                                     <div class="carousel-inner">
                                         <?php
                                         // Mengambil gambar dari database
@@ -63,23 +58,20 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
 
                                         foreach ($images as $index => $image) {
                                             $activeClass = ($index === 0) ? 'active' : '';
-                                            ?>
+                                        ?>
                                             <div class="carousel-item <?php echo $activeClass; ?>">
-                                                <img src="admin/uploads/<?php echo $image; ?>"
-                                                    alt="Product Image<?php echo $index + 1; ?>" class="carousel-image" />
+                                                <img src="admin/uploads/<?php echo $image; ?>" alt="Product Image<?php echo $index + 1; ?>" class="carousel-image" />
                                             </div>
-                                            <?php
+                                        <?php
                                         }
                                         ?>
                                     </div>
 
-                                    <button class="carousel-control-prev" type="button"
-                                        data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="prev">
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Previous</span>
                                     </button>
-                                    <button class="carousel-control-next" type="button"
-                                        data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="next">
+                                    <button class="carousel-control-next" type="button" data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Next</span>
                                     </button>
@@ -104,7 +96,7 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
                         </div>
                     </div>
                 </div>
-                <?php
+            <?php
             }
             ?>
         </div>

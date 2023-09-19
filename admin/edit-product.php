@@ -43,7 +43,7 @@ if (strlen($_SESSION['login']) == 0) {
             $error = "Something went wrong. Please try again.";
         }
     }
-    ?>
+?>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -79,7 +79,7 @@ if (strlen($_SESSION['login']) == 0) {
                     type: "POST",
                     url: "get_subcategory.php",
                     data: 'catid=' + val,
-                    success: function (data) {
+                    success: function(data) {
                         $("#subcategory").html(data);
                     }
                 });
@@ -150,40 +150,32 @@ if (strlen($_SESSION['login']) == 0) {
                                     $catid = intval($_GET['cid']);
                                     $query = mysqli_query($con, "SELECT * FROM tblproducts WHERE id='$catid'");
                                     while ($row = mysqli_fetch_array($query)) {
-                                        ?>
+                                    ?>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <form class="form-horizontal" name="" method="post"
-                                                    enctype="multipart/form-data">
+                                                <form class="form-horizontal" name="" method="post" enctype="multipart/form-data">
                                                     <div class="form-group">
                                                         <label class="col-md-2 control-label">Product Name</label>
                                                         <div class="col-md-10">
-                                                            <input type="text" class="form-control"
-                                                                value="<?php echo htmlentities($row['name']); ?>" name="name"
-                                                                required>
+                                                            <input type="text" class="form-control" value="<?php echo htmlentities($row['name']); ?>" name="name" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="col-md-2 control-label">Description</label>
                                                         <div class="col-md-10">
-                                                            <textarea class="form-control" rows="5" name="description"
-                                                                required><?php echo htmlentities($row['description']); ?></textarea>
+                                                            <textarea class="form-control" rows="5" name="description" required><?php echo htmlentities($row['description']); ?></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="col-md-2 control-label">Price</label>
                                                         <div class="col-md-10">
-                                                            <input type="number" class="form-control"
-                                                                value="<?php echo htmlentities($row['price']); ?>" name="price"
-                                                                required>
+                                                            <input type="number" class="form-control" value="<?php echo htmlentities($row['price']); ?>" name="price" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="col-md-2 control-label">Quantity</label>
                                                         <div class="col-md-10">
-                                                            <input type="number" class="form-control"
-                                                                value="<?php echo htmlentities($row['quantity']); ?>"
-                                                                name="quantity" required>
+                                                            <input type="number" class="form-control" value="<?php echo htmlentities($row['quantity']); ?>" name="quantity" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
@@ -207,8 +199,7 @@ if (strlen($_SESSION['login']) == 0) {
                                                     <div class="form-group">
                                                         <label class="col-md-2 control-label">&nbsp;</label>
                                                         <div class="col-md-10">
-                                                            <button type="submit" name="update"
-                                                                class="btn btn-success waves-effect waves-light">Update</button>
+                                                            <button type="submit" name="update" class="btn btn-success waves-effect waves-light">Update</button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -254,7 +245,7 @@ if (strlen($_SESSION['login']) == 0) {
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
         <script>
-            jQuery(document).ready(function () {
+            jQuery(document).ready(function() {
                 $('.summernote').summernote({
                     height: 240,
                     minHeight: null,
