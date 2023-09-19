@@ -310,33 +310,6 @@ include('includes/config.php');
     </div>
   </section>
 
-  <!-- News -->
-  <!-- <section id="blog" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
-            <div class="section-title">
-              <h1 class="display-4 fw-semibold">Berita Kegiatan Terkini</h1>
-              <div class="line"></div>
-              <p>Segala berita kegiatan dan hal - hal menarik selalu kami perbaharui di social media kami agar informasi dapat dijangkau oleh ranah publik yang lebih terbiasa</p>
-            </div>
-          </div>
-        </div>
-        <div class="container mt-4">
-          <div class="row" data-aos="fade-down" data-aos-delay="150">
-            <div class="col-md-4">
-              <div class="fb-post" data-href="https://www.facebook.com/permalink.php?story_fbid=pfbid0hgFXC3k3iN75FjBFzvZyRsTwiv23zWJXA5K5VvqbT98HtJybjb79JPsGj4UA6Zv9l&id=100095767382930" data-show-text="true" data-width="350"></div>
-            </div>
-            <div class="col-md-4">
-              <div class="fb-post" data-href="https://www.facebook.com/biopower.biopower/posts/pfbid0dGvCCDAyBp2az8mKbZt3vZhpmmwVeWEwpif5cmi9ykYds91AxA7MYXK7KLe6HUyhl" data-show-text="true" data-width="350"></div>
-            </div>
-            <div class="col-md-4">
-              <div class="fb-post" data-href="https://www.facebook.com/biopower.biopower/posts/pfbid0jUYhCq9v9bcST1RjxnWqH27MWHuDsawf3HKRPyEqxVpWpYLST3KjErPzgvHkx1Ajl" data-show-text="true" data-width="350"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
   <!-- FOOTER -->
   <footer class="bg-dark">

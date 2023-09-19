@@ -38,11 +38,11 @@ if (isset($_POST['submit'])) {
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>News Portal | Home Page</title>
+  <title>P4S Purileisa</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
-
+  <link rel="stylesheet" href="assets/css/style.css">
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
 
@@ -103,9 +103,6 @@ if (isset($_POST['submit'])) {
       <!-- Sidebar Widgets Column -->
       <?php include('includes/sidebar.php'); ?>
     </div>
-    <!-- /.row -->
-    <!---Comment Section --->
-
     <div class="row">
       <div class="col-md-8">
         <div class="card my-4">

@@ -14,7 +14,7 @@ include('includes/config.php');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>News Portal | Home Page</title>
+    <title>P4S Purileisa</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
@@ -31,42 +31,7 @@ include('includes/config.php');
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-white sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="./assets/images/image 1.svg" alt="" width="100px" />
-            </a>
-            <button class="navbar-toggler mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNews" aria-controls="navbarNews" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNews">
-                <ul class="navbar-nav ms-auto ps-2 pe-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php#about">Tentang</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php#blog">Kegiatan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php#portfolio">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php#team">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php#team">Berita</a>
-                    </li>
-                </ul>
-                <a href="product.php" class="btn btn-outline-success ms-3">Produk Kami</a>
-                <a href="daftar.html" class="btn btn-success ms-3">Daftar Sekarang</a>
-            </div>
-        </div>
-    </nav>
-    <!-- Navigation -->
-    <!-- <?php include('includes/header.php'); ?> -->
+    <?php include('includes/header.php'); ?> 
 
     <!-- Page Content -->
     <div class="container">
@@ -107,7 +72,7 @@ include('includes/config.php');
                             </h2>
                             <p><b>Category : </b> <a href="category.php?catid=<?php echo htmlentities($row['cid']) ?>"><?php echo htmlentities($row['category']); ?></a> </p>
 
-                            <a href="news-details.php?nid=<?php echo htmlentities($row['pid']) ?>" class="btn btn-primary">Read More
+                            <a href="news-details.php?nid=<?php echo htmlentities($row['pid']) ?>" class="btn btn-success">Read More
                                 &rarr;</a>
                         </div>
                         <div class="card-footer text-muted">

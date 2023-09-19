@@ -209,44 +209,8 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
     </div> -->
 
     <!-- FOOTER -->
-    <footer class="bg-dark">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row gy-5">
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="foot-img">
-                            <a href="#"><img src="./assets/images/image 1.png" alt="" /></a>
-                        </div>
-                        <div class="social-icons">
-                            <a href="#"><i class="ri-twitter-fill"></i></a>
-                            <a href="#"><i class="ri-instagram-fill"></i></a>
-                            <a href="#"><i class="ri-github-fill"></i></a>
-                            <a href="#"><i class="ri-dribbble-fill"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <h5 class="mb-0 text-white">ABOUT</h5>
-                        <div class="line"></div>
-                        <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Career</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <h5 class="mb-0 text-white">Kontak Kami</h5>
-                        <div class="line"></div>
-                        <ul>
-                            <li>Kalimantan Timur, Kota Samarinda</li>
-                            <li>(+62) 812 - 3456 - 7890</li>
-                            <li>P4SPurileisa@gmail.com</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include('includes/footer.php'); ?>
+    
 </body>
 
 </html>
