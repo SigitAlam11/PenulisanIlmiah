@@ -54,11 +54,11 @@ if (isset($_POST['submit'])) {
   <?php include('includes/header.php'); ?>
 
   <!-- Page Content -->
-  <div class="container">
+  <div class="container mt-3">
 
 
 
-    <div class="row" style="margin-top: 4%">
+    <div class="row">
 
       <!-- Blog Entries Column -->
       <div class="col-md-8">

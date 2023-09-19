@@ -40,8 +40,8 @@ include('includes/config.php');
             <button class="navbar-toggler mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNews" aria-controls="navbarNews" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse m-auto" id="navbarNews">
-                <ul class="navbar-nav ms-2">
+            <div class="collapse navbar-collapse" id="navbarNews">
+                <ul class="navbar-nav ms-auto ps-2 pe-2">
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
@@ -55,7 +55,10 @@ include('includes/config.php');
                         <a class="nav-link" href="index.php#portfolio">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php#team">News</a>
+                        <a class="nav-link" href="index.php#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php#team">Berita</a>
                     </li>
                 </ul>
                 <a href="product.php" class="btn btn-outline-success ms-3">Produk Kami</a>
