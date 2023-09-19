@@ -33,15 +33,15 @@ include('includes/config.php');
 
 <body>
     <nav class="navbar navbar-expand-lg bg-white sticky-top">
-        <div class="container pe-2">
+        <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="./assets/images/image 1.svg" alt="" width="100px" />
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNews" aria-controls="navbarNews" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse m-auto" id="navbarNews">
+                <ul class="navbar-nav ms-2">
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
@@ -58,8 +58,8 @@ include('includes/config.php');
                         <a class="nav-link" href="index.php#team">News</a>
                     </li>
                 </ul>
-                <a href="product.php" class="btn btn-outline-success ms-lg-3">Produk Kami</a>
-                <a href="daftar.html" class="btn btn-success ms-lg-3">Daftar Sekarang</a>
+                <a href="product.php" class="btn btn-outline-success ms-3">Produk Kami</a>
+                <a href="daftar.html" class="btn btn-success ms-3">Daftar Sekarang</a>
             </div>
         </div>
     </nav>
@@ -161,8 +161,7 @@ include('includes/config.php');
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
     </head>
 </body>

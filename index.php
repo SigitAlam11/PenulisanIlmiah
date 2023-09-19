@@ -51,8 +51,8 @@ include('includes/config.php');
             <a class="nav-link" href="news.php">Berita</a>
           </li>
         </ul>
-        <a href="product.php" class="btn btn-outline-success ms-lg-3">Produk Kami</a>
-        <a href="daftar.html" class="btn btn-success ms-lg-3">Daftar Sekarang</a>
+        <a href="product.php" class="btn btn-outline-success ms-2">Produk Kami</a>
+        <a href="daftar.html" class="btn btn-success ms-2">Daftar Sekarang</a>
       </div>
     </div>
   </nav>
