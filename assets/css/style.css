@@ -120,12 +120,10 @@ img {
 }
 
 /* Text */
-.ol-left{
-    text-align: center;
+li{
     align-items: center;
+    padding: 10px;
 }
-
-
 
 /* HERO */
 #hero {

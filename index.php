@@ -15,7 +15,7 @@ include('includes/config.php');
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css"/>
   <link rel="icon" href="assets/images/image 1.svg" type="image/x-icon" />
   <link rel="shortcut icon" href="assets/images/image 1.svg" type="image/x-icon" />
 </head>
@@ -110,25 +110,22 @@ include('includes/config.php');
 
             <div class="text-left" data-aos="fade-down" data-aos-delay="50">
                         <h2 class="display-6 fw-normal text-center">Visi :</h2>
-                        <p>
+                        <p class="text-center">
                             Menjadi Pusat Pelatihan Pertanian dan Perdesaan Swadaya yang terpercaya dalam membangun pertanian regeneratif,  
                             berbiaya eksternal rendah, mandiri, berkelanjutan, sanggup beradaptasi dan mendukung mitigasi perubahan iklim 
                             berbasis sumberdaya lokal pada tahun 2024
                         </p>
                     </div>
 
-                    <div class="d-flex justify-content-center" data-aos="fade-down" data-aos-delay="50">
+                    <div data-aos="fade-down" data-aos-delay="50">
                         <div>
                             <h2 class="display-6 fw-normal text-center">Misi :</h2>
-                            <ol type="1" class="ol-left">
-                                <li>Senantiasa berinovasi dan berkreasi atas praktek pertanian yang ilmiah & aplikatif</li>
-                                <li>Melakukan riset mandiri atau berkolaborasi dengan stakeholder pertanian lain untuk sarana produksi dan teknik praktek pertanian LEISA (low external inputs sustainable agriculture).</li>
-                                <li>Senantiasa berinovasi dan berkreasi atas praktek pertanian yang ilmiah & aplikatif</li>
-                                <li>Senantiasa berinovasi dan berkreasi atas praktek pertanian yang ilmiah & aplikatif</li>
-                                <li>Senantiasa berinovasi dan berkreasi atas praktek pertanian yang ilmiah & aplikatif</li>
-                                <li>Senantiasa berinovasi dan berkreasi atas praktek pertanian yang ilmiah & aplikatif</li>
-                                <li>Senantiasa berinovasi dan berkreasi atas praktek pertanian yang ilmiah & aplikatif</li>
-                                <li>Senantiasa berinovasi dan berkreasi atas praktek pertanian yang ilmiah & aplikatif</li>
+                            <ol type="1" style="margin: 0px 300px; margin-bottom: 20px;">
+                                <li style="padding: 5px";>Senantiasa berinovasi dan berkreasi atas praktek pertanian yang ilmiah & aplikatif</li>
+                                <li style="padding: 5px";>Melakukan riset mandiri atau berkolaborasi dengan stakeholder pertanian lain untuk sarana produksi dan teknik praktek pertanian LEISA (low external inputs sustainable agriculture).</li>
+                                <li style="padding: 5px";>Mengekplorasi, mengeksploitasi, merehabilitasi, merestorasi dan melestarikan sumberdaya lokal pendukung pertanian.</li>
+                                <li style="padding: 5px";>Mensosialisasikan dan mempromosikan praktek pertanian yang menjaga agroekologi, ramah lingkungan dan cerdas iklim.</li>
+                                <li style="padding: 5px";>Mengembangkan praktek ekonomi pertanian sirkular bagi pencapaian kesejahteraan petani.</li>
                             </ol>
                         </div>
                     </div>
@@ -136,10 +133,9 @@ include('includes/config.php');
                     <div class="d-flex justify-content-center" data-aos="fade-down" data-aos-delay="50">
                         <div>
                             <h2 class="display-6 fw-normal text-center">Aksi :</h2>
-                            <ol type="1" class="ol-left">
-                                <li>Senantiasa berinovasi dan berkreasi atas praktek pertanian yang ilmiah & aplikatif</li>
-                                <li>Melakukan riset mandiri atau berkolaborasi dengan stakeholder pertanian lain untuk sarana produksi dan teknik praktek pertanian LEISA (low external inputs sustainable agriculture).</li>
-                                <li>Senantiasa berinovasi dan berkreasi atas praktek pertanian yang ilmiah & aplikatif</li>
+                            <ol type="1" style="margin: 0px 300px;">
+                                <li style="padding: 5px";>Mengembangkan sarana produksi; pembenah tanah, pupuk organik & hayati, pestisida, feed aditive, dan produk pendukung kesehatan lingkungan pertanian.</li>
+                                <li style="padding: 5px";>Mengembangkan prasarana produksi yang efisien dan efektif</li>
                             </ol>
                         </div>
                     </div>
@@ -355,7 +351,7 @@ include('includes/config.php');
         <div class="row gy-5">
           <div class="col-lg-4 col-sm-6">
             <div class="foot-img">
-              <a href="#"><img src="./assets/images/image 1.png" alt="" /></a>
+              <a href="#"><img src="./assets/images/image 1.svg" alt="" /></a>
             </div>
           </div>
           <div class="col-lg-4 col-sm-6">
