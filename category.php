@@ -10,48 +10,38 @@ include('includes/config.php');
 
   <head>
 
-    <meta charset="utf-8">
+  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>News Portal | Category  Page</title>
+    <title>P4S Purileisa</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" href="assets/images/image 1.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/images/image 1.svg" type="image/x-icon" />
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
-
   </head>
 
   <body>
 
-    <!-- Navigation -->
    <?php include('includes/header.php');?>
-
-    <!-- Page Content -->
     <div class="container">
-
-
      
       <div class="row" style="margin-top: 4%">
 
-        <!-- Blog Entries Column -->
         <div class="col-md-8">
-
-          <!-- Blog Post -->
 <?php 
         if($_GET['catid']!=''){
 $_SESSION['catid']=intval($_GET['catid']);
 }
-             
-
-
-
-
-
-
      if (isset($_GET['pageno'])) {
             $pageno = $_GET['pageno'];
         } else {

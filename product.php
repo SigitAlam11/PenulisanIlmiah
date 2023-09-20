@@ -28,6 +28,8 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
 
+<?php include('includes/header.php'); ?>
+
     <div class="container">
         <div class="headdaftar">
             <h1 class="text-center text-success font-weight-bold">Produk Kami<br> apa yang kami buat pasti Bermanfaat!

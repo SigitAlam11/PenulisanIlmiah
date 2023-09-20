@@ -15,41 +15,26 @@ include('includes/config.php');
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>News Portal | Search Page</title>
-
-  <!-- Bootstrap core CSS -->
+  <title>P4S Purileisa</title>
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
 
-  <!-- Navigation -->
   <?php include('includes/header.php'); ?>
-
-  <!-- Page Content -->
   <div class="container">
-
-
 
     <div class="row" style="margin-top: 4%">
 
-      <!-- Blog Entries Column -->
       <div class="col-md-8">
-
-        <!-- Blog Post -->
         <?php
         if ($_POST['searchtitle'] != '') {
           $st = $_SESSION['searchtitle'] = $_POST['searchtitle'];
         }
         $st;
-
-
-
-
 
         if (isset($_GET['pageno'])) {
           $pageno = $_GET['pageno'];
