@@ -43,172 +43,54 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
 
 
     <div class="content-product">
-        <div class="row">
-            <?php
-            while ($row = mysqli_fetch_assoc($query)) {
-            ?>
-                <!-- Product -->
-                <div class="col-md-12 mb-4">
-                    <div class="product-item">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div id="<?php echo $carouselID; ?>" class="carousel slide product-image" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <?php
-                                        // Mengambil gambar dari database
-                                        $images = array($row['picture1'], $row['picture2'], $row['picture3']);
-
-                                        foreach ($images as $index => $image) {
-                                            $activeClass = ($index === 0) ? 'active' : '';
-                                        ?>
-                                            <div class="carousel-item <?php echo $activeClass; ?>">
-                                                <img src="admin/uploads/<?php echo $image; ?>" alt="Product Image<?php echo $index + 1; ?>" class="carousel-image" />
-                                            </div>
-                                        <?php
-                                        }
-                                        ?>
-                                    </div>
-
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
+    <div class="row">
+        <?php while ($row = mysqli_fetch_assoc($query)) { ?>
+            <!-- Product -->
+            <div class="col-xl-12 mb-4" style="margin : 120px ;"> <!-- Adjusted to col-lg-8 for wider layout on large screens -->
+                <div class="product-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <?php
+                            $carouselID = "productCarousel" . $row['id']; // Unique ID for each carousel
+                            ?>
+                            <div id="<?php echo $carouselID; ?>" class="carousel slide product-image" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <?php
+                                    $images = array($row['picture1'], $row['picture2'], $row['picture3']);
+                                    foreach ($images as $index => $image) {
+                                        $activeClass = ($index === 0) ? 'active' : '';
+                                    ?>
+                                        <div class="carousel-item <?php echo $activeClass; ?>">
+                                            <img src="admin/uploads/<?php echo $image; ?>" alt="Product Image<?php echo $index + 1; ?>" class="carousel-image img-fluid" />
+                                        </div>
+                                    <?php } ?>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="product-detail">
-                                    <div class="text-product-detail px-2">
-                                        <h1>
-                                            <?php echo $row['name']; ?>
-                                        </h1>
-                                        <h2>Rp
-                                            <?php echo $row['price']; ?>
-                                        </h2>
-                                        <p>
-                                            <?php echo $row['description']; ?>
-                                        </p>
-                                    </div>
-                                    <button class="buy-btn mx-auto fw-bold">Beli Sekarang</button>
-                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
                         </div>
+                        
+                            <div class="product-detail">
+                                <div class="text-product-detail px-2">
+                                    <h1><?php echo $row['name']; ?></h1>
+                                    <h2>Rp <?php echo $row['price']; ?></h2>
+                                    <p><?php echo $row['description']; ?></p>
+                                </div>
+                                <button class="buy-btn mx-auto fw-bold">Beli Sekarang</button>
+                            </div>
+                        
                     </div>
                 </div>
-            <?php
-            }
-            ?>
-        </div>
+            </div>
+        <?php } ?>
     </div>
-
-
-
-    <!-- Product 1 -->
-    <!-- <div class="content-product d-flex">
-        <div id="productCarousel" class="carousel slide product-image">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="3"
-                    aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./assets/images/produk.png" alt="produk" class="carousel-image" />
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/produk.png" alt="produk" class="carousel-image" />
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/produk.png" alt="produk" class="carousel-image" />
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/produk.png" alt="produk" class="carousel-image" />
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <div class="product-detail">
-            <div class="text-product-detail px-2">
-                <h1>Produk Alami</h1>
-                <h2>Rp 10.000/botol</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur. Viverra a mauris convallis in et. Volutpat amet ut
-                    scelerisque leo
-                    congue ut suspendisse amet amet. Tempor molestie mattis metus pellentesque nullam aliquam. Arcu
-                    dictum
-                    ipsum ante euismod ut et orci lacus.
-                </p>
-            </div>
-            <button class="buy-btn mx-auto fw-bold">Beli Sekarang</button>
-        </div>
-    </div> -->
-    <!-- product-content -->
-    <!-- <div class="content-product">
-        <div id="productCarousel2" class="carousel slide product-image">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#productCarousel2" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#productCarousel2" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#productCarousel2" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#productCarousel2" data-bs-slide-to="3"
-                    aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./assets/images/produk.png" alt="produk" class="carousel-image" />
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/produk.png" alt="produk" class="carousel-image" />
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/produk.png" alt="produk" class="carousel-image" />
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/produk.png" alt="produk" class="carousel-image" />
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel2" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel2" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <div class="product-detail">
-            <div class="text-product-detail px-2">
-                <h1>Produk Alami</h1>
-                <h2>Rp 10.000/botol</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur. Viverra a mauris convallis in et. Volutpat amet ut
-                    scelerisque leo
-                    congue ut suspendisse amet amet. Tempor molestie mattis metus pellentesque nullam aliquam. Arcu
-                    dictum
-                    ipsum ante euismod ut et orci lacus.
-                </p>
-            </div>
-            <button class="buy-btn mx-auto fw-bold">Beli Sekarang</button>
-        </div>
-    </div>
-    </div> -->
+</div>
 
     <!-- FOOTER -->
     <?php include('includes/footer.php'); ?>
