@@ -14,7 +14,7 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>P4SPurileisa</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -28,7 +28,7 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
 
-<?php include('includes/header.php'); ?>
+    <?php include('includes/header.php'); ?>
 
     <div class="container">
         <div class="headdaftar">
@@ -42,56 +42,56 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
     </nav>
 
 
-    <div class="content-product">
-    <?php while ($row = mysqli_fetch_assoc($query)) { ?>
-        <!-- Product -->
-        <div class="row mb-4"> <!-- Create a new row for each product -->
-            <div class="col-md-6">
-                <?php
-                $carouselID = "productCarousel" . $row['id']; // Unique ID for each carousel
-                ?>
-                <div id="<?php echo $carouselID; ?>" class="carousel slide product-image" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <?php
-                        $images = array($row['picture1'], $row['picture2'], $row['picture3']);
-                        foreach ($images as $index => $image) {
-                            $activeClass = ($index === 0) ? 'active' : '';
-                        ?>
-                            <div class="carousel-item <?php echo $activeClass; ?>">
-                                <img src="admin/uploads/<?php echo $image; ?>" alt="Product Image<?php echo $index + 1; ?>" class="carousel-image img-fluid" />
-                            </div>
-                        <?php } ?>
+    <div class="d-flex flex-column">
+        <?php while ($row = mysqli_fetch_assoc($query)) { ?>
+            <!-- Product -->
+            <div class="content-product row mb-4"> <!-- Create a new row for each product -->
+                <div class="col-md-6">
+                    <?php
+                    $carouselID = "productCarousel" . $row['id']; // Unique ID for each carousel
+                    ?>
+                    <div id="<?php echo $carouselID; ?>" class="carousel slide product-image" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <?php
+                            $images = array($row['picture1'], $row['picture2'], $row['picture3']);
+                            foreach ($images as $index => $image) {
+                                $activeClass = ($index === 0) ? 'active' : '';
+                            ?>
+                                <div class="carousel-item <?php echo $activeClass; ?>">
+                                    <img src="admin/uploads/<?php echo $image; ?>" alt="Product Image<?php echo $index + 1; ?>" class="carousel-image img-fluid" />
+                                </div>
+                            <?php } ?>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
-            </div>
 
-            <div class="col-md-6">
-                <div class="product-detail">
-                    <div class="text-product-detail px-2">
-                        <h1><?php echo $row['name']; ?></h1>
-                        <h2>Rp <?php echo $row['price']; ?></h2>
-                        <p><?php echo $row['description']; ?></p>
+                <div class="col-md-6 d-flex flex-row justify-content-center">
+                    <div class="product-detail">
+                        <div class="text-product-detail px-2">
+                            <h1><?php echo $row['name']; ?></h1>
+                            <h2>Rp <?php echo $row['price']; ?></h2>
+                            <p><?php echo $row['description']; ?></p>
+                        </div>
+                        <button class="buy-btn mx-auto fw-bold">Beli Sekarang</button>
                     </div>
-                    <button class="buy-btn mx-auto fw-bold">Beli Sekarang</button>
                 </div>
             </div>
-        </div>
-    <?php } ?>
-</div>
+        <?php } ?>
+    </div>
 
 
 
     <!-- FOOTER -->
     <?php include('includes/footer.php'); ?>
-    
+
 </body>
 
 </html>

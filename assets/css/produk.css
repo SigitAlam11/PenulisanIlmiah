@@ -4,14 +4,13 @@
   color: black;
 }
 
-
-
 .content-product {
   background-color: #ebebeb;
   display: flex;
   padding-top: 2em;
   padding-bottom: 2em;
   padding-left: 3em;
+  padding-right: 3em;
   margin-bottom: 33px;
 }
 
@@ -40,7 +39,6 @@
 .partial-image img {
   max-width: 180px;
   height: 120px;
-  
 }
 
 .product-detail {
