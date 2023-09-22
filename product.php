@@ -46,11 +46,11 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
         <?php while ($row = mysqli_fetch_assoc($query)) { ?>
             <!-- Product -->
             <div class="content-product row mb-4"> <!-- Create a new row for each product -->
-                <div class="col-md-6">
+                <div class="col-md-6 d-flex flex-row justify-content-center align-items-center">
                     <?php
                     $carouselID = "productCarousel" . $row['id']; // Unique ID for each carousel
                     ?>
-                    <div id="<?php echo $carouselID; ?>" class="carousel slide product-image" data-bs-ride="carousel">
+                    <div id="<?php echo $carouselID; ?>" class="carousel slide " data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <?php
                             $images = array($row['picture1'], $row['picture2'], $row['picture3']);
@@ -58,7 +58,7 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
                                 $activeClass = ($index === 0) ? 'active' : '';
                             ?>
                                 <div class="carousel-item <?php echo $activeClass; ?>">
-                                    <img src="admin/uploads/<?php echo $image; ?>" alt="Product Image<?php echo $index + 1; ?>" class="carousel-image img-fluid" />
+                                    <img src="admin/uploads/<?php echo $image; ?>" alt="Product Image<?php echo $index + 1; ?>" class="carousel-image img-fluid product-image" />
                                 </div>
                             <?php } ?>
                         </div>
@@ -74,7 +74,7 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
                 </div>
 
                 <div class="col-md-6 d-flex flex-row justify-content-center">
-                    <div class="product-detail">
+                    <div class="product-detail w-100">
                         <div class="text-product-detail px-2">
                             <h1><?php echo $row['name']; ?></h1>
                             <h2>Rp <?php echo $row['price']; ?></h2>
