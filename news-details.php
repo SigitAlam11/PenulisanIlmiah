@@ -98,60 +98,9 @@ if (isset($_POST['submit'])) {
             </div>
           </div>
         <?php } ?>
-
-
-
-
-
-
       </div>
-
-      <!-- Sidebar Widgets Column -->
       <?php include('includes/sidebar.php'); ?>
-    </div>
-    <div class="row">
-      <div class="col-md-8">
-        <div class="card my-4">
-          <h5 class="card-header">Leave a Comment:</h5>
-          <div class="card-body">
-            <form name="Comment" method="post">
-              <input type="hidden" name="csrftoken" value="<?php echo htmlentities($_SESSION['token']); ?>" />
-              <div class="form-group mb-2">
-                <input type="text" name="name" class="form-control" placeholder="Enter your fullname" required>
-              </div>
-
-              <div class="form-group mb-2">
-                <input type="email" name="email" class="form-control" placeholder="Enter your Valid email" required>
-              </div>
-
-
-              <div class="form-group mb-2">
-                <textarea class="form-control" name="comment" rows="3" placeholder="Comment" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-            </form>
-          </div>
-        </div>
-
-        <!---Comment Display Section --->
-
-        <?php
-        $sts = 1;
-        $query = mysqli_query($con, "select name,comment,postingDate from  tblcomments where postId='$pid' and status='$sts'");
-        while ($row = mysqli_fetch_array($query)) {
-        ?>
-          <div class="media mb-4">
-            <img class="d-flex mr-3 rounded-circle" src="images/usericon.png" alt="">
-            <div class="media-body">
-              <h5 class="mt-0"><?php echo htmlentities($row['name']); ?> <br />
-                <span style="font-size:11px;"><b>at</b> <?php echo htmlentities($row['postingDate']); ?></span>
-              </h5>
-
-              <?php echo htmlentities($row['comment']); ?>
-            </div>
-          </div>
-        <?php } ?>
-
+      </div>
       </div>
     </div>
   </div>
