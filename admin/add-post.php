@@ -58,7 +58,7 @@ $error="Something went wrong . Please try again.";
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
         <!-- App title -->
-        <title>Newsportal | Add Post</title>
+        <title>P4S Purileisa | Add Post</title>
 
         <!-- Summernote css -->
         <link href="../plugins/summernote/summernote.css" rel="stylesheet" />
@@ -99,10 +99,7 @@ function getSubCat(val) {
 
         <!-- Begin page -->
         <div id="wrapper">
-
-            <!-- Top Bar Start -->
            <?php include('includes/topheader.php');?>
-            <!-- ========== Left Sidebar Start ========== -->
              <?php include('includes/leftsidebar.php');?>
             <!-- Left Sidebar End -->
 

@@ -33,33 +33,14 @@ if (strlen($_SESSION['login']) == 0) {
 
 
     <body class="fixed-left">
-
-        <!-- Begin page -->
         <div id="wrapper">
-
-            <!-- Top Bar Start -->
             <div class="topbar">
-
-                <!-- LOGO -->
                 <div class="topbar-left">
                     <a href="index.php" class="logo"><span>NP<span>Admin</span></span><i class="mdi mdi-layers"></i></a>
                 </div>
-
-                <!-- Button mobile view to collapse sidebar menu -->
                 <?php include('includes/topheader.php'); ?>
             </div>
-            <!-- Top Bar End -->
-
-
-            <!-- ========== Left Sidebar Start ========== -->
             <?php include('includes/leftsidebar.php'); ?>
-            <!-- Left Sidebar End -->
-
-
-
-            <!-- ============================================================== -->
-            <!-- Start right Content here -->
-            <!-- ============================================================== -->
             <div class="content-page">
                 <!-- Start content -->
                 <div class="content">

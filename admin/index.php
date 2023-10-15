@@ -39,7 +39,7 @@ if (isset($_POST['login'])) {
 
 
     <!-- App title -->
-    <title>News Portal | Admin Panel</title>
+    <title>P4S Purileisa | Admin Panel</title>
 
     <!-- App css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
