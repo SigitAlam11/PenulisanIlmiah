@@ -20,7 +20,6 @@ if($_GET['resid'])
 	$query=mysqli_query($con,"update tblcategory set Is_Active='1' where id='$id'");
 	$msg="Category restored successfully";
 }
-
 // Code for Forever deletionparmdel
 if($_GET['action']=='parmdel' && $_GET['rid'])
 {
@@ -33,7 +32,6 @@ if($_GET['action']=='parmdel' && $_GET['rid'])
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
         <title> | Manage Categories</title>
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -44,33 +42,14 @@ if($_GET['action']=='parmdel' && $_GET['rid'])
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="../plugins/switchery/switchery.min.css">
         <script src="assets/js/modernizr.min.js"></script>
-
     </head>
-
-
     <body class="fixed-left">
-
-        <!-- Begin page -->
         <div id="wrapper">
-
-            <!-- Top Bar Start -->
 <?php include('includes/topheader.php');?>
-
-            <!-- ========== Left Sidebar Start ========== -->
 <?php include('includes/leftsidebar.php');?>
-            <!-- Left Sidebar End -->
-
-
-
-            <!-- ============================================================== -->
-            <!-- Start right Content here -->
-            <!-- ============================================================== -->
             <div class="content-page">
-                <!-- Start content -->
                 <div class="content">
                     <div class="container">
-
-
                         <div class="row">
 							<div class="col-xs-12">
 								<div class="page-title-box">
@@ -90,33 +69,18 @@ if($_GET['action']=='parmdel' && $_GET['rid'])
                                 </div>
 							</div>
 						</div>
-                        <!-- end row -->
-
-
 <div class="row">
 <div class="col-sm-6">  
- 
 <?php if($msg){ ?>
 <div class="alert alert-success" role="alert">
 <strong>Well done!</strong> <?php echo htmlentities($msg);?>
 </div>
 <?php } ?>
-
 <?php if($delmsg){ ?>
 <div class="alert alert-danger" role="alert">
 <strong>Oh snap!</strong> <?php echo htmlentities($delmsg);?></div>
 <?php } ?>
-
-
 </div>
-                                 
-                                 
-                                    
-
-
-                                   
-
-
                                     <div class="row">
 										<div class="col-md-12">
 											<div class="demo-box m-t-20">
@@ -125,7 +89,6 @@ if($_GET['action']=='parmdel' && $_GET['rid'])
 <button id="addToTable" class="btn btn-success waves-effect waves-light">Add <i class="mdi mdi-plus-circle-outline" ></i></button>
 </a>
  </div>
-
 												<div class="table-responsive">
                                                     <table class="table m-0 table-colored-bordered table-bordered-primary">
                                                         <thead>
@@ -193,15 +156,14 @@ $cnt++;
                                                                 <th>#</th>
                                                                 <th> Category</th>
                                                                 <th>Description</th>
-                                                          
                                                                 <th>Posting Date</th>
-                                                                  <th>Last updation Date</th>
+                                                                <th>Last updation Date</th>
                                                                 <th>Action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
 <?php 
-$query=mysqli_query($con,"Select id,CategoryName,Description,PostingDate,UpdationDate from  tblcategory where Is_Active=0");
+$query=mysqli_query($con,"Select id,CategoryName,Description,PostingDate,UpdationDate from tblcategory where Is_Active=0");
 $cnt=1;
 while($row=mysqli_fetch_array($query))
 {
@@ -223,45 +185,14 @@ $cnt++;
                                                   
                                                     </table>
                                                 </div>
-
-
-
-                                                
 											</div>
-
 										</div>
-
-							
 									</div>                  
-                                  
-
-
-
-                                   
-
-
-
-
-
-
-                        
-
-
-
-
-
-
                     </div> <!-- container -->
-
                 </div> <!-- content -->
 <?php include('includes/footer.php');?>
             </div>
-
         </div>
-        <!-- END wrapper -->
-
-
-
         <script>
             var resizefunc = [];
         </script>

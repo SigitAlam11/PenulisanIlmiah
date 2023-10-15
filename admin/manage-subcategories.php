@@ -174,110 +174,12 @@ while($row=mysqli_fetch_array($query))
 $cnt++;
  }} ?>
 </tbody>
-                                                  
                                                     </table>
                                                 </div>
-
-
-
-
 											</div>
-
 										</div>
-
-							
 									</div>
                                     <!--- end row -->
-
-
-                                    
-<div class="row">
-<div class="col-md-12">
-<div class="demo-box m-t-20">
-<div class="m-b-30">
-
- <h4><i class="fa fa-trash-o" ></i> Deleted SubCategories</h4>
-
- </div>
-
-<div class="table-responsive">
-   <table class="table m-0 table-colored-bordered table-bordered-danger">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>#</th>
-                                                                <th> Category</th>
-                                                                <th>Sub Category</th>
-                                                                <th>Description</th>
-                                                          
-                                                                <th>Posting Date</th>
-                                                                  <th>Last updation Date</th>
-                                                                <th>Action</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-<?php 
-$query=mysqli_query($con,"Select tblcategory.CategoryName as catname,tblsubcategory.Subcategory as subcatname,tblsubcategory.SubCatDescription as SubCatDescription,tblsubcategory.PostingDate as subcatpostingdate,tblsubcategory.UpdationDate as subcatupdationdate,tblsubcategory.SubCategoryId as subcatid from tblsubcategory join tblcategory on tblsubcategory.CategoryId=tblcategory.id where tblsubcategory.Is_Active=0");
-$cnt=1;
-$rowcount=mysqli_num_rows($query);
-if($rowcount==0)
-{
-?>
-<tr>
-
-<td colspan="7" align="center"><h3 style="color:red">No record found</h3></td>
-<tr>
-<?php 
-} else {
-
-while($row=mysqli_fetch_array($query))
-{
-?>
-
- <tr>
-<th scope="row"><?php echo htmlentities($cnt);?></th>
-<td><?php echo htmlentities($row['catname']);?></td>
-<td><?php echo htmlentities($row['subcatname']);?></td>
-<td><?php echo htmlentities($row['SubCatDescription']);?></td>
-<td><?php echo htmlentities($row['subcatpostingdate']);?></td>
-<td><?php echo htmlentities($row['subcatupdationdate']);?></td>
-<td><a href="manage-subcategories.php?resid=<?php echo htmlentities($row['subcatid']);?>"><i class="ion-arrow-return-right" title="Restore this SubCategory"></i></a>
-    &nbsp;<a href="manage-subcategories.php?scid=<?php echo htmlentities($row['subcatid']);?>&&action=perdel"> <i class="fa fa-trash-o" style="color: #f05050"></i></a> </td>
-</tr>
-<?php
-$cnt++;
- } }?>
-</tbody>
-                                                  
-                                                    </table>
-                                                </div>
-
-
-
-                                                
-											</div>
-
-										</div>
-
-							
-									</div>                  
-                                  
-
-
-
-                                   
-
-
-
-
-
-
-                        
-
-
-
-
-
-
                     </div> <!-- container -->
 
                 </div> <!-- content -->
