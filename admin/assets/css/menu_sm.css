@@ -12,7 +12,7 @@ File: Menu
   z-index: 999;
 }
 .topbar .topbar-left {
-  background: #36404e;
+  background: #18b33a;
   float: left;
   text-align: center;
   height: 70px;
@@ -88,7 +88,7 @@ File: Menu
   width: 160px;
   padding-top: 10px;
   z-index: 10;
-  background: #36404e;
+  background: #18b33a;
   bottom: 50px;
   margin-top: 0;
   padding-bottom: 70px;
@@ -217,7 +217,6 @@ body.fixed-left .side-menu.left {
   line-height: 18px;
   text-align: center;
   margin-bottom: 10px;
-  vertical-align: middle;
 }
 #sidebar-menu ul li a .drop-arrow {
   float: right;

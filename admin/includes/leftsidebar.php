@@ -5,7 +5,6 @@
         <div id="sidebar-menu">
             <ul>
                 <li class="menu-title">Navigation</li>
-
                 <li class="has_sub">
                     <a href="dashboard.php" class="waves-effect"><i class="mdi mdi-view-dashboard"></i> <span> Dashboard
                         </span> </a>
