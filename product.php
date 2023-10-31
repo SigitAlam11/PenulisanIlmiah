@@ -8,7 +8,8 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
 
 ?>
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,17 +25,18 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 </head>
+
 <body data-bs-spy="scroll" data-bs-target=".navbar">
     <?php include('includes/header.php'); ?>
-        <div class="container">
-            <div class="headdaftar">
-                <h1 class="text-center text-success font-weight-bold">Produk Kami<br> apa yang kami buat pasti Bermanfaat!
-                </h1>
-                <p>Produk kami adalah produk yang terbuat dari bahan alam dan juga pemanfaatan bahan tersebut berguna untuk
-                    memastikan tidak adanya pembuangan limbah yang tidak berarti namun lebih ke arah pemanfaatan sehingga
-                    dapat menjadi produk yang bermanfaat bagi kehidupan kita!</p>
-            </div>
+    <div class="container">
+        <div class="headdaftar">
+            <h1 class="text-center text-success font-weight-bold">Produk Kami<br> apa yang kami buat pasti Bermanfaat!
+            </h1>
+            <p>Produk kami adalah produk yang terbuat dari bahan alam dan juga pemanfaatan bahan tersebut berguna untuk
+                memastikan tidak adanya pembuangan limbah yang tidak berarti namun lebih ke arah pemanfaatan sehingga
+                dapat menjadi produk yang bermanfaat bagi kehidupan kita!</p>
         </div>
+    </div>
     </nav>
 
 
@@ -89,4 +91,5 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
     <?php include('includes/footer.php'); ?>
 
 </body>
+
 </html>

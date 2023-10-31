@@ -6,6 +6,7 @@ include('includes/config.php');
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,6 +25,7 @@ include('includes/config.php');
     <link href="css/modern-business.css" rel="stylesheet">
 
 </head>
+
 <body>
     <?php include('includes/header.php'); ?>
     <div class="container">
@@ -101,4 +103,5 @@ include('includes/config.php');
 
     </head>
 </body>
+
 </html>
