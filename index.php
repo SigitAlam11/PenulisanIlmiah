@@ -287,58 +287,74 @@ include('includes/config.php');
         <div class="container">
           <div class="row justify-content-center mb-4">
             <div class="row">
-              <div class="col-lg-3 mb-4">
+              <div class="col mb-1">
                 <div class="row">
                   <div class="col-md-12">
-                    <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t1.jpg" alt="wrapkit" class="img-fluid rounded-circle" />
+                    <img src="assets/images/picpro1.png" alt="wrapkit" class="img-fluid rounded-circle" />
                   </div>
                   <div class="col-md-12 text-center">
                     <div class="pt-2">
-                      <h5 class="mt-4 font-weight-medium mb-0">Michael Doe</h5>
-                      <h6 class="subtitle mb-3">Property Specialist</h6>
-                      <p>You can relay on our amazing features list and also our customer services will be great experience.</p>
+                      <h5 class="mt-4 font-weight-medium mb-0">H.Bambang Ikwan Hidayat</h5>
+                      <br>
+                      <p>Ketua P4S Purileisa</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 mb-4">
+              <div class="col mb-1">
                 <div class="row">
                   <div class="col-md-12">
-                    <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t2.jpg" alt="wrapkit" class="img-fluid rounded-circle" />
+                    <img src="assets/images/picpro2.png" alt="wrapkit" class="img-fluid rounded-circle" />
                   </div>
                   <div class="col-md-12 text-center">
                     <div class="pt-2">
-                      <h5 class="mt-4 font-weight-medium mb-0">Michael Doe</h5>
-                      <h6 class="subtitle mb-3">Property Specialist</h6>
-                      <p>You can relay on our amazing features list and also our customer services will be great experience.</p>
+                      <h5 class="mt-4 font-weight-medium mb-0">Hj. Ekawati Yulsilviana</h5>
+                      <br>
+                      <br>
+                      <p>Sekertaris P4S Purileisa</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 mb-4">
+              <div class="col mb-1">
                 <div class="row">
                   <div class="col-md-12">
-                    <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t3.jpg" alt="wrapkit" class="img-fluid rounded-circle" />
+                    <img src="assets/images/picpro3.png" alt="wrapkit" class="img-fluid rounded-circle" />
                   </div>
                   <div class="col-md-12 text-center">
                     <div class="pt-2">
-                      <h5 class="mt-4 font-weight-medium mb-0">Michael Doe</h5>
-                      <h6 class="subtitle mb-3">Property Specialist</h6>
-                      <p>You can relay on our amazing features list and also our customer services will be great experience.</p>
+                      <h5 class="mt-4 font-weight-medium mb-0">Revivali Muhammad Ulisse A</h5>
+                      <br>
+                      <p>Divisi Produksi P4S Purileisa</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 mb-4">
+              <div class="col mb-1">
                 <div class="row">
                   <div class="col-md-12">
-                    <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t4.jpg" alt="wrapkit" class="img-fluid rounded-circle" />
+                    <img src="assets/images/picpro4.png" alt="wrapkit" class="img-fluid rounded-circle" />
                   </div>
                   <div class="col-md-12 text-center">
                     <div class="pt-2">
-                      <h5 class="mt-4 font-weight-medium mb-0">Michael Doe</h5>
-                      <h6 class="subtitle mb-3">Property Specialist</h6>
-                      <p>You can relay on our amazing features list and also our customer services will be great experience.</p>
+                      <h5 class="mt-4 font-weight-medium mb-0">Delvina Agustin</h5>
+                      <br>
+                      <br>
+                      <p>Divisi HUMAS P4S Purileisa</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-1">
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="assets/images/picpro5.png" alt="wrapkit" class="img-fluid rounded-circle" />
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <div class="pt-2">
+                      <h5 class="mt-4 font-weight-medium mb-0">Luthfianissa Auroraning Nagari</h5>
+                      <br>
+                      <p>Bendahara P4S Purileisa</p>
                     </div>
                   </div>
                 </div>
@@ -346,69 +362,6 @@ include('includes/config.php');
             </div>
           </div>
         </div>
-        <div class="py-5 team4" data-aos="fade-down" data-aos-delay="150">
-          <div class="container">
-            <div class="row justify-content-center mb-4">
-              <div class="row">
-                <div class="col-lg-3 mb-4">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t1.jpg" alt="wrapkit" class="img-fluid rounded-circle" />
-                    </div>
-                    <div class="col-md-12 text-center">
-                      <div class="pt-2">
-                        <h5 class="mt-4 font-weight-medium mb-0">Michael Doe</h5>
-                        <h6 class="subtitle mb-3">Property Specialist</h6>
-                        <p>You can relay on our amazing features list and also our customer services will be great experience.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 mb-4">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t2.jpg" alt="wrapkit" class="img-fluid rounded-circle" />
-                    </div>
-                    <div class="col-md-12 text-center">
-                      <div class="pt-2">
-                        <h5 class="mt-4 font-weight-medium mb-0">Michael Doe</h5>
-                        <h6 class="subtitle mb-3">Property Specialist</h6>
-                        <p>You can relay on our amazing features list and also our customer services will be great experience.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 mb-4">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t3.jpg" alt="wrapkit" class="img-fluid rounded-circle" />
-                    </div>
-                    <div class="col-md-12 text-center">
-                      <div class="pt-2">
-                        <h5 class="mt-4 font-weight-medium mb-0">Michael Doe</h5>
-                        <h6 class="subtitle mb-3">Property Specialist</h6>
-                        <p>You can relay on our amazing features list and also our customer services will be great experience.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 mb-4">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t4.jpg" alt="wrapkit" class="img-fluid rounded-circle" />
-                    </div>
-                    <div class="col-md-12 text-center">
-                      <div class="pt-2">
-                        <h5 class="mt-4 font-weight-medium mb-0">Michael Doe</h5>
-                        <h6 class="subtitle mb-3">Property Specialist</h6>
-                        <p>You can relay on our amazing features list and also our customer services will be great experience.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
   </section>
 
 
