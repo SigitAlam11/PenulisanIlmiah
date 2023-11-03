@@ -138,7 +138,7 @@ li {
       rgba(var(--c-brand-rgb), 0.507),
       rgba(var(--c-brand-rgb), 0.438)
     ),
-    url(../images/heri.png);
+    url(/assets/images/heri.png);
   background-position: center;
   background-size: cover;
 }

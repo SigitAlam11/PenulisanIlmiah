@@ -69,7 +69,7 @@ include('includes/config.php');
             Pusat Pelatihan dan Perdesaan Swadaya
           </h5>
           <div data-aos="fade-up" data-aos-delay="50">
-            <a href="../Newsportal/daftar.html" class="btn btn-success btn-lg">Daftar Sekarang</a>
+            <a href="daftar.html" class="btn btn-success btn-lg">Daftar Sekarang</a>
           </div>
         </div>
       </div>
