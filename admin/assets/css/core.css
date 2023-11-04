@@ -1,32 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
-@import 'https://fonts.googleapis.com/css?family=Hind+Madurai:600,700';
-/*
-Template Name: Zircos Dashboard
-Author: CoderThemes
-Email: coderthemes@gmail.com
-File: Core
-*/
-/* =============
-  == Core List==
+@import "https://fonts.googleapis.com/css?family=Hind+Madurai:600,700";
 
-   - Common
-   - Helper classes
-   - Extra
-   - Bootstrap Custom
-   - Waves effect
-   - Print (Invoice css)
-   - Demo Css (Demo purpose only)
-
-============= */
 /* =============
    Common
 ============= */
 body {
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   margin: 0;
   padding-bottom: 60px;
   overflow-x: hidden;
-  color: #797979;
+  color: #000000;
 }
 html {
   position: relative;
@@ -44,8 +27,8 @@ h3,
 h4,
 h5,
 h6 {
-  color: #505458;
-  font-family: 'Hind Madurai', sans-serif;
+  color: #ffffff;
+  font-family: "Hind Madurai", sans-serif;
   margin: 10px 0;
 }
 h5 {
@@ -60,7 +43,7 @@ p {
 b,
 strong {
   font-weight: 600;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 a:hover {
   outline: 0;
@@ -222,7 +205,7 @@ a:focus {
   overflow: hidden;
 }
 .font-secondary {
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .font-600 {
   font-weight: 600;
@@ -432,7 +415,7 @@ a:focus {
   border-right: 7px solid transparent;
   border-bottom: 7px solid rgba(152, 166, 173, 0.15);
   border-left: 7px solid transparent;
-  content: '';
+  content: "";
 }
 .arrow-dropdown-menu:after {
   position: absolute;
@@ -442,7 +425,7 @@ a:focus {
   border-right: 6px solid transparent;
   border-bottom: 6px solid #ffffff;
   border-left: 6px solid transparent;
-  content: '';
+  content: "";
 }
 .arrow-dropdown-menu.arrow-menu-right:before {
   left: auto;
@@ -548,8 +531,8 @@ a:focus {
 .label {
   font-weight: 600;
   letter-spacing: 0.05em;
-  padding: .3em .6em .2em;
-  font-family: 'Hind Madurai', sans-serif;
+  padding: 0.3em 0.6em 0.2em;
+  font-family: "Hind Madurai", sans-serif;
 }
 .label-white {
   background-color: rgba(255, 255, 255, 0.7);

@@ -47,10 +47,8 @@ include('includes/config.php');
           <li class="nav-item">
             <a class="nav-link" href="#team">Team</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="news.php">Berita</a>
-          </li>
         </ul>
+        <a href="news.php" class="btn btn-outline-success ms-2">Berita</a>
         <a href="product.php" class="btn btn-outline-success ms-2">Produk Kami</a>
         <a href="daftar.html" class="btn btn-success ms-2">Daftar Sekarang</a>
       </div>
@@ -75,6 +73,7 @@ include('includes/config.php');
       </div>
     </div>
   </section>
+
 
   <!-- Supported by -->
   <div class="container">

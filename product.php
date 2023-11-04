@@ -27,12 +27,11 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
-    <?php include('includes/header.php'); ?>
     <div class="container">
         <div class="headdaftar">
             <h1 class="text-center text-success font-weight-bold">Produk Kami<br> apa yang kami buat pasti Bermanfaat!
             </h1>
-            <p>Produk kami adalah produk yang terbuat dari bahan alam dan juga pemanfaatan bahan tersebut berguna untuk
+            <p class="text-center">Produk kami adalah produk yang terbuat dari bahan alam dan juga pemanfaatan bahan tersebut berguna untuk
                 memastikan tidak adanya pembuangan limbah yang tidak berarti namun lebih ke arah pemanfaatan sehingga
                 dapat menjadi produk yang bermanfaat bagi kehidupan kita!</p>
         </div>
@@ -78,7 +77,7 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
                             <h2>Rp <?php echo $row['price']; ?></h2>
                             <p><?php echo $row['description']; ?></p>
                         </div>
-                        <button class="buy-btn mx-auto fw-bold">Beli Sekarang</button>
+                        <a class="btn btn-success ms-2" href="https://wa.me/6282258332033">Beli Sekarang</a>
                     </div>
                 </div>
             </div>

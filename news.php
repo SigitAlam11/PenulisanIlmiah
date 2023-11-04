@@ -18,7 +18,7 @@ include('includes/config.php');
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" href="assets/images/image 1.svg" type="image/x-icon" />
     <link rel="shortcut icon" href="assets/images/image 1.svg" type="image/x-icon" />
     <!-- Custom styles for this template -->
@@ -27,8 +27,16 @@ include('includes/config.php');
 </head>
 
 <body>
-    <?php include('includes/header.php'); ?>
     <div class="container">
+        <div class="container">
+            <div class="headdaftar">
+                <h1 class="text-center text-success font-weight-bold">Berita Kami</h1>
+                <p class="text-center">Segalan informasi yang kami berikan pada bagian ini adalah informasi mengenai apa yang telah kami capai dan lakukan Selama
+                    berkegiatan di usaha kami sehingga tentu kami ingin berkontribusi untuk membagikan hal - hal terkait mengenai usaha ini kepada
+                    pengunjung kami.
+                </p>
+            </div>
+        </div>
         <div class="row" style="margin-top: 4%">
             <div class="col-md-8">
 

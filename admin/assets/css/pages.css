@@ -1,36 +1,3 @@
-/*
-Template Name: Zircos Dashboard
-Author: CoderThemes
-Email: coderthemes@gmail.com
-File: Menu
-*/
-/* =============
-  == Components List==
-
-   - Email
-   - Maps
-   - About Us
-   - Contact Us
-   - Member List
-   - Timeline
-   - Pages (Common)
-   - Countdown
-   - FAQ
-   - Gallery
-   - Pricing
-   - Account Pages
-   - Sitemaps (v1.1)
-   - Search Results (v1.1)
-   - Blog (v1.2)
-   - Real Estate (v1.5)
-
-============= */
-/* =============
-   Email
-============= */
-.mails {
-  /* chat-widget */
-}
 .mails a {
   color: #797979;
 }
@@ -71,7 +38,7 @@ File: Menu
   background-clip: padding-box;
 }
 .mails .unread a {
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   color: #313a46;
 }
 .mails .table-detail {
@@ -175,7 +142,7 @@ File: Menu
   max-width: 200px;
   display: none;
   color: #ffffff;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .mapael .zoomIn,
 .mapael .zoomOut,
@@ -223,7 +190,7 @@ File: Menu
 .feature-icon {
   height: 80px;
   width: 80px;
-  border: 2px solid #767D8E;
+  border: 2px solid #767d8e;
   margin: 0px auto;
   border-radius: 50%;
   font-size: 42px;
@@ -529,7 +496,7 @@ h3.timeline-title {
 #count-down .clock-presenter .digit {
   margin-top: 20px;
   font-size: 60px;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   line-height: 60px;
   height: 60px;
   display: inline-block;
@@ -545,7 +512,7 @@ h3.timeline-title {
   cursor: default;
   font-size: 16px;
   color: #4bd396;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   text-transform: uppercase;
 }
 @media (max-width: 992px) {
@@ -596,7 +563,7 @@ h3.timeline-title {
   transition: all 0.3s ease-out;
   color: #313a46;
   font-weight: 600;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   padding: 5px 10px;
   display: inline-block;
   margin-bottom: 5px;
@@ -658,7 +625,7 @@ h3.timeline-title {
 }
 .pricing-column .plan-title {
   font-size: 16px;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   margin-bottom: 10px;
   color: #4bd396;
   text-transform: uppercase;
@@ -667,7 +634,7 @@ h3.timeline-title {
 }
 .pricing-column .plan-price {
   font-size: 48px;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   margin-bottom: 10px;
   color: #313a46;
 }
@@ -692,7 +659,7 @@ h3.timeline-title {
   width: 75px;
   height: 75px;
   text-align: right;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .ribbon span {
   font-size: 10px;
@@ -837,13 +804,13 @@ ul.sitemap {
   padding-left: 0;
 }
 ul.sitemap li {
-  line-height: 2.5rem ;
-  vertical-align: top ;
+  line-height: 2.5rem;
+  vertical-align: top;
   list-style: none;
-  position: relative ;
+  position: relative;
 }
 ul.sitemap li a {
-  text-decoration: none ;
+  text-decoration: none;
   color: #7c8d96;
   display: inline-block;
 }
@@ -851,29 +818,29 @@ ul.sitemap li a:hover {
   color: #7fc1fc;
 }
 ul.sitemap ul {
-  margin-left: 1.5rem ;
-  margin-bottom: 1.5rem ;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
   padding-top: 10px;
 }
 ul.sitemap ul li {
-  position: relative ;
+  position: relative;
 }
 ul.sitemap ul li::before {
   content: "";
   display: inline-block;
   width: 3rem;
-  height: 100% ;
+  height: 100%;
   border-left: 1px solid rgba(152, 166, 173, 0.5);
-  position: absolute ;
+  position: absolute;
   top: -1.25;
 }
 ul.sitemap ul li::before {
   content: "";
   display: inline-block;
   width: 3rem;
-  height: 2.5rem ;
-  border-bottom: 1px #ccc solid ;
-  position: absolute ;
+  height: 2.5rem;
+  border-bottom: 1px #ccc solid;
+  position: absolute;
   top: -1.25rem;
 }
 ul.sitemap ul li a {
@@ -998,8 +965,8 @@ Real Estate
 .property-card.property-horizontal .property-content .property-action a {
   margin-right: 7px;
   color: #313a46;
-  -webkit-transition: color .3s ease;
-  transition: color .3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
   display: inline-block;
   border: 1px solid #dcdee0;
   padding: 1px 6px;

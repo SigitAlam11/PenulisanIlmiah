@@ -16,17 +16,16 @@ if (strlen($_SESSION['login']) == 0) {
         $query = mysqli_query($con, "update  tblsubcategory set Is_Active='1' where SubCategoryId='$id'");
         $msg = "Category restored successfully";
     }
-
     // Code for Forever deletionparmdel
     if ($_GET['action'] == 'perdel' && $_GET['scid']) {
         $id = intval($_GET['scid']);
         $query = mysqli_query($con, "delete from   tblsubcategory  where SubCategoryId='$id'");
         $delmsg = "Category deleted forever";
     }
-
 ?>
     <!DOCTYPE html>
     <html lang="en">
+
     <head>
         <title> P4S Purileisa | Manage SubCategories</title>
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />

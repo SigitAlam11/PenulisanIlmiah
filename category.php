@@ -29,9 +29,16 @@ include('includes/config.php');
 </head>
 
 <body>
-
-  <?php include('includes/header.php'); ?>
   <div class="container">
+    <div class="container">
+      <div class="headdaftar">
+        <h1 class="text-center text-success font-weight-bold">Berita Kami</h1>
+        <p class="text-center">Segalan informasi yang kami berikan pada bagian ini adalah informasi mengenai apa yang telah kami capai dan lakukan Selama
+          berkegiatan di usaha kami sehingga tentu kami ingin berkontribusi untuk membagikan hal - hal terkait mengenai usaha ini kepada
+          pengunjung kami.
+        </p>
+      </div>
+    </div>
 
     <div class="row" style="margin-top: 4%">
 
@@ -71,7 +78,7 @@ include('includes/config.php');
               <div class="card-body">
                 <h2 class="card-title"><?php echo htmlentities($row['posttitle']); ?></h2>
 
-                <a href="news-details.php?nid=<?php echo htmlentities($row['pid']) ?>" class="btn btn-primary">Read More &rarr;</a>
+                <a href="news-details.php?nid=<?php echo htmlentities($row['pid']) ?>" class="btn btn-success">Read More &rarr;</a>
               </div>
               <div class="card-footer text-muted">
                 Posted on <?php echo htmlentities($row['postingdate']); ?>

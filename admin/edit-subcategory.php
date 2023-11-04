@@ -22,6 +22,7 @@ if (strlen($_SESSION['login']) == 0) {
 ?>
     <!DOCTYPE html>
     <html lang="en">
+
     <head>
         <title>P4S Purileisa | Edit Sub Category</title>
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
