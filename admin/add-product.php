@@ -45,6 +45,7 @@ if (strlen($_SESSION['login']) == 0) {
 
     <!DOCTYPE html>
     <html lang="en">
+
     <head>
         <title>P4S Purileisa| Add Product</title>
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -60,6 +61,7 @@ if (strlen($_SESSION['login']) == 0) {
         <script src="assets/js/modernizr.min.js"></script>
 
     </head>
+
     <body class="fixed-left">
         <div id="wrapper">
             <?php include('includes/topheader.php'); ?>

@@ -47,15 +47,15 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
                     <?php
                     $carouselID = "productCarousel" . $row['id']; // Unique ID for each carousel
                     ?>
-                    <div id="<?php echo $carouselID; ?>" class="carousel slide " data-bs-ride="carousel">
+                    <div id="<?php echo $carouselID; ?>" class="w-100 carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <?php
                             $images = array($row['picture1'], $row['picture2'], $row['picture3']);
                             foreach ($images as $index => $image) {
                                 $activeClass = ($index === 0) ? 'active' : '';
                             ?>
-                                <div class="carousel-item <?php echo $activeClass; ?>">
-                                    <img src="admin/uploads/<?php echo $image; ?>" alt="Product Image<?php echo $index + 1; ?>" class="carousel-image img-fluid product-image" />
+                                <div class="carousel-item ps-3 pe-3  <?php echo $activeClass; ?>">
+                                    <img src="admin/uploads/<?php echo $image; ?>" alt="Product Image<?php echo $index + 1; ?>" class="carousel-image" />
                                 </div>
                             <?php } ?>
                         </div>
