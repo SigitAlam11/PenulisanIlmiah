@@ -47,10 +47,8 @@ include('includes/config.php');
           <li class="nav-item">
             <a class="nav-link" href="#team">Team</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="news.php">Berita</a>
-          </li>
         </ul>
+        <a href="news.php" class="btn btn-outline-success ms-2">Berita</a>
         <a href="product.php" class="btn btn-outline-success ms-2">Produk Kami</a>
         <a href="daftar.html" class="btn btn-success ms-2">Daftar Sekarang</a>
       </div>
@@ -69,12 +67,13 @@ include('includes/config.php');
             Pusat Pelatihan dan Perdesaan Swadaya
           </h5>
           <div data-aos="fade-up" data-aos-delay="50">
-            <a href="../Newsportal/daftar.html" class="btn btn-success btn-lg">Daftar Sekarang</a>
+            <a href="daftar.html" class="btn btn-success btn-lg">Daftar Sekarang</a>
           </div>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- Supported by -->
   <div class="container">
@@ -283,31 +282,85 @@ include('includes/config.php');
           </div>
         </div>
       </div>
-      <div class="row g-0 text-center">
-        <div class="col-md-6" data-aos="fade-down" data-aos-delay="150">
-          <div class="team-member image-zoom">
-            <div class="image-zoom-wrapper">
-              <img src="./assets/images/bude.svg" alt="" width="300px" height="300px" />
-            </div>
-            <div class="team-member-content">
-              <h4 class="text-white">Ekawati Yulsilviana</h4>
-              <p class="mb-0 text-white">Tenaga Pendidikan dan Hubungan Masyarakat</p>
+      <div class="py-5 team4" data-aos="fade-down" data-aos-delay="150">
+        <div class="container">
+          <div class="row justify-content-center mb-4">
+            <div class="row">
+              <div class="col mb-1">
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="assets/images/picpro1.png" alt="wrapkit" class="img-fluid rounded-circle" />
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <div class="pt-2">
+                      <h5 class="mt-4 font-weight-medium mb-0">H.Bambang Ikwan Hidayat</h5>
+                      <br>
+                      <p>Ketua P4S Purileisa</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-1">
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="assets/images/picpro2.png" alt="wrapkit" class="img-fluid rounded-circle" />
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <div class="pt-2">
+                      <h5 class="mt-4 font-weight-medium mb-0">Hj. Ekawati Yulsilviana</h5>
+                      <br>
+                      <br>
+                      <p>Sekertaris P4S Purileisa</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-1">
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="assets/images/picpro3.png" alt="wrapkit" class="img-fluid rounded-circle" />
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <div class="pt-2">
+                      <h5 class="mt-4 font-weight-medium mb-0">Revivali Muhammad Ulisse A</h5>
+                      <br>
+                      <p>Divisi Produksi P4S Purileisa</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-1">
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="assets/images/picpro4.png" alt="wrapkit" class="img-fluid rounded-circle" />
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <div class="pt-2">
+                      <h5 class="mt-4 font-weight-medium mb-0">Delvina Agustin</h5>
+                      <br>
+                      <br>
+                      <p>Divisi HUMAS P4S Purileisa</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-1">
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="assets/images/picpro5.png" alt="wrapkit" class="img-fluid rounded-circle" />
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <div class="pt-2">
+                      <h5 class="mt-4 font-weight-medium mb-0">Luthfianissa Auroraning Nagari</h5>
+                      <br>
+                      <p>Bendahara P4S Purileisa</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6" data-aos="fade-down" data-aos-delay="250">
-          <div class="team-member image-zoom">
-            <div class="image-zoom-wrapper">
-              <img src="./assets/images/pakde.svg" alt="" width="300px" height="300px" />
-            </div>
-            <div class="team-member-content">
-              <h4 class="text-white">Bambang Ikwan Hidayat</h4>
-              <p class="mb-0 text-white">Tenaga pengembangan Sumber Daya dan Hubungan Masyarakat</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
 

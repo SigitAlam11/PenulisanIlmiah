@@ -24,16 +24,10 @@ if (strlen($_SESSION['login']) == 0) {
 
 
 ?>
-
-
     <!DOCTYPE html>
     <html lang="en">
-
     <head>
-
-        <title>Newsportal | Add User</title>
-
-        <!-- App css -->
+        <title>P4S Purileisa | Add User</title>
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
@@ -41,32 +35,21 @@ if (strlen($_SESSION['login']) == 0) {
         <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" href="assets/images/image 1.svg" type="image/x-icon" />
+        <link rel="shortcut icon" href="assets/images/image 1.svg" type="image/x-icon" />
         <link rel="stylesheet" href="../plugins/switchery/switchery.min.css">
         <script src="assets/js/modernizr.min.js"></script>
 
     </head>
 
-
     <body class="fixed-left">
-
-        <!-- Begin page -->
         <div id="wrapper">
-
-            <!-- Top Bar Start -->
             <?php include('includes/topheader.php'); ?>
-            <!-- Top Bar End -->
-
-
-            <!-- ========== Left Sidebar Start ========== -->
             <?php include('includes/leftsidebar.php'); ?>
-            <!-- Left Sidebar End -->
-
             <div class="content-page">
                 <!-- Start content -->
                 <div class="content">
                     <div class="container">
-
-
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="page-title-box">
@@ -94,9 +77,6 @@ if (strlen($_SESSION['login']) == 0) {
                                 <div class="card-box">
                                     <h4 class="m-t-0 header-title"><b>Edit User </b></h4>
                                     <hr />
-
-
-
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <!---Success Message--->
@@ -106,7 +86,6 @@ if (strlen($_SESSION['login']) == 0) {
                                                     <?php echo htmlentities($msg); ?>
                                                 </div>
                                             <?php } ?>
-
                                             <!---Error Message--->
                                             <?php if ($error) { ?>
                                                 <div class="alert alert-danger" role="alert">
@@ -114,24 +93,16 @@ if (strlen($_SESSION['login']) == 0) {
                                                     <?php echo htmlentities($error); ?>
                                                 </div>
                                             <?php } ?>
-
-
                                         </div>
                                     </div>
 
                                     <?php
-
-
                                     $catid = $_GET['cid'];
                                     $query = mysqli_query($con, "Select * FROM  tbladmin where id=$catid ");
                                     $cnt = 1;
                                     while ($row = mysqli_fetch_array($query)) {
 
                                     ?>
-
-
-
-
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <form class="form-horizontal" name="AdminUserName" method="post">
@@ -159,7 +130,6 @@ if (strlen($_SESSION['login']) == 0) {
                                                 <div class="form-group">
                                                     <label class="col-md-2 control-label">&nbsp;</label>
                                                     <div class="col-md-10">
-
                                                         <button type="submit" class="btn btn-custom waves-effect waves-light btn-md" name="submit">
                                                             Update
                                                         </button>
@@ -168,40 +138,15 @@ if (strlen($_SESSION['login']) == 0) {
 
                                                 </form>
                                             </div>
-
-
                                         </div>
-
-
-
-
-
-
-
-
-
-
-
                                 </div>
                             </div>
                         </div>
-                        <!-- end row -->
-
-
                     </div> <!-- container -->
-
                 </div> <!-- content -->
-
                 <?php include('includes/footer.php'); ?>
-
             </div>
-
-
         </div>
-        <!-- END wrapper -->
-
-
-
         <script>
             var resizefunc = [];
         </script>

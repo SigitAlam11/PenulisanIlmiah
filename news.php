@@ -8,42 +8,38 @@ include('includes/config.php');
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>P4S Purileisa</title>
-
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" href="assets/images/image 1.svg" type="image/x-icon" />
     <link rel="shortcut icon" href="assets/images/image 1.svg" type="image/x-icon" />
-
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <?php include('includes/header.php'); ?>
-
-    <!-- Page Content -->
     <div class="container">
-
-
-
+        <div class="container">
+            <div class="headdaftar">
+                <h1 class="text-center text-success font-weight-bold">Berita Kami</h1>
+                <p class="text-center">Segalan informasi yang kami berikan pada bagian ini adalah informasi mengenai apa yang telah kami capai dan lakukan Selama
+                    berkegiatan di usaha kami sehingga tentu kami ingin berkontribusi untuk membagikan hal - hal terkait mengenai usaha ini kepada
+                    pengunjung kami.
+                </p>
+            </div>
+        </div>
         <div class="row" style="margin-top: 4%">
-
-            <!-- Blog Entries Column -->
             <div class="col-md-8">
 
-                <!-- Blog Post -->
                 <?php
                 if (isset($_GET['pageno'])) {
                     $pageno = $_GET['pageno'];
@@ -71,24 +67,15 @@ include('includes/config.php');
                                 <?php echo htmlentities($row['posttitle']); ?>
                             </h2>
                             <p><b>Category : </b> <a href="category.php?catid=<?php echo htmlentities($row['cid']) ?>"><?php echo htmlentities($row['category']); ?></a> </p>
-
                             <a href="news-details.php?nid=<?php echo htmlentities($row['pid']) ?>" class="btn btn-success">Read More
                                 &rarr;</a>
                         </div>
                         <div class="card-footer text-muted">
                             Posted on
                             <?php echo htmlentities($row['postingdate']); ?>
-
                         </div>
                     </div>
                 <?php } ?>
-
-
-
-
-                <!-- Pagination -->
-
-
                 <ul class="pagination justify-content-center mb-4">
                     <li class="page-item"><a href="?pageno=1" class="page-link">First</a></li>
                     <li class="<?php if ($pageno <= 1) {
@@ -111,18 +98,10 @@ include('includes/config.php');
                     </li>
                     <li class="page-item"><a href="?pageno=<?php echo $total_pages; ?>" class="page-link">Last</a></li>
                 </ul>
-
             </div>
-
-            <!-- Sidebar Widgets Column -->
             <?php include('includes/sidebar.php'); ?>
         </div>
-        <!-- /.row -->
-
     </div>
-    <!-- /.container -->
-
-    <!-- Footer -->
     <?php include('includes/footer.php'); ?>
 
 

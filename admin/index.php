@@ -39,9 +39,7 @@ if (isset($_POST['login'])) {
 
 
     <!-- App title -->
-    <title>News Portal | Admin Panel</title>
-
-    <!-- App css -->
+    <title>P4S Purileisa | Admin Panel</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
@@ -49,31 +47,23 @@ if (isset($_POST['login'])) {
     <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
-
     <script src="assets/js/modernizr.min.js"></script>
 
 </head>
-
-
 <body class="bg-transparent">
-
-    <!-- HOME -->
     <section>
         <div class="container-alt">
             <div class="row">
                 <div class="col-sm-12">
-
                     <div class="wrapper-page">
-
                         <div class="m-t-40 account-pages">
                             <div class="text-center account-logo-box bg-success">
-                                    <a href="index.php" class="text-success">
-                                        <span><img src="./assets/images/image 1-1.svg" alt="" width="30%">
-                                    </a>
+                                <a href="index.php" class="text-success">
+                                    <span><img src="./assets/images/image 1-1.svg" alt="" width="30%">
+                                </a>
                             </div>
                             <div class="account-content">
                                 <form class="form-horizontal" method="post">
-
                                     <div class="form-group ">
                                         <div class="col-xs-12">
                                             <input class="form-control" type="text" required="" name="username" placeholder="Username" autocomplete="off">
@@ -85,34 +75,21 @@ if (isset($_POST['login'])) {
                                             <input class="form-control" type="password" name="password" required="" placeholder="Password" autocomplete="off">
                                         </div>
                                     </div>
-
-
-
                                     <div class="form-group account-btn text-center m-t-10">
                                         <div class="col-xs-12">
                                             <button class="btn w-md btn-bordered btn-success waves-effect waves-light" type="submit" name="login">Log In</button>
                                         </div>
                                     </div>
-
                                 </form>
-
                                 <div class="clearfix"></div>
 
                             </div>
                         </div>
-                        <!-- end card-box-->
-
-
-
-
                     </div>
-                    <!-- end wrapper -->
-
                 </div>
             </div>
         </div>
     </section>
-    <!-- END HOME -->
 
     <script>
         var resizefunc = [];

@@ -1,9 +1,3 @@
-/*
-Template Name: Zircos Dashboard
-Author: CoderThemes
-Email: coderthemes@gmail.com
-File: Menu
-*/
 .topbar {
   left: 0;
   position: fixed;
@@ -35,7 +29,7 @@ File: Menu
   color: #ffffff !important;
   font-size: 24px;
   text-transform: uppercase;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 70px;
@@ -88,16 +82,17 @@ File: Menu
   width: 225px;
   padding-top: 10px;
   z-index: 10;
-  background: #36404e;
+  background: #ffffff;
   bottom: 50px;
   margin-top: 0;
   padding-bottom: 70px;
   position: fixed;
   top: 0;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
+  box-shadow: 0 0 24px 0 rgba(255, 255, 255, 0.06),
+    0 1px 0 0 rgba(0, 0, 0, 0.02);
 }
 .side-menu .waves-effect .waves-ripple {
-  background-color: rgba(127, 193, 252, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 .side-menu.left {
   position: absolute;
@@ -159,11 +154,11 @@ body.fixed-left .side-menu.left {
 #sidebar-menu ul li .menu-arrow {
   -webkit-transition: -webkit-transform 0.15s;
   -o-transition: -o-transform 0.15s;
-  transition: transform .15s;
+  transition: transform 0.15s;
   position: absolute;
   right: 20px;
   display: inline-block;
-  font-family: 'Material Design Icons';
+  font-family: "Material Design Icons";
   text-rendering: auto;
   line-height: 18px;
   font-size: 16px;
@@ -256,13 +251,13 @@ body.fixed-left .side-menu.left {
 }
 .menu-title {
   padding: 12px 20px !important;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   pointer-events: none;
   cursor: default;
   font-size: 11px;
   text-transform: uppercase;
-  color: #98a6ad;
-  font-family: 'Hind Madurai', sans-serif;
+  color: white;
+  font-family: "Hind Madurai", sans-serif;
 }
 /* Help Box */
 .help-box {
@@ -314,7 +309,7 @@ body.fixed-left .side-menu.left {
   left: 35px;
   text-indent: 0;
   display: block !important;
-  padding: .2em .6em .3em !important;
+  padding: 0.2em 0.6em 0.3em !important;
 }
 #wrapper.enlarged .left.side-menu #sidebar-menu ul > li {
   position: relative;
@@ -447,7 +442,7 @@ body.fixed-left .side-menu.left {
 }
 .user-list .user-list-item {
   padding: 10px 12px !important;
-  border-bottom: 1px solid #EEEEEE !important;
+  border-bottom: 1px solid #eeeeee !important;
 }
 .user-list .user-list-item .avatar {
   float: left;
@@ -530,7 +525,7 @@ body.fixed-left .side-menu.left {
   font-weight: 600;
 }
 .page-header {
-  border-bottom: 1px solid #DBDDDE;
+  border-bottom: 1px solid #dbddde;
 }
 .header-title {
   font-size: 16px;

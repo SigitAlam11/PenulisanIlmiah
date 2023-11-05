@@ -1,36 +1,3 @@
-/*
-Template Name: Zircos Dashboard
-Author: CoderThemes
-Email: coderthemes@gmail.com
-File: Components
-*/
-/* =============
-  == Components List==
-
-   - Popover / Tooltips
-   - Buttons
-   - Panels
-   - Portlets
-   - Checkbox and radio
-   - Modals
-   - Tabs
-   - Progressbars
-   - Notifications
-   - Alerts
-   - Carousel
-   - Sweet Alert
-   - Widgets
-   - Nestable
-   - Rating
-   - Calendar
-   - Form
-   - Tables
-   - Charts
-
-============= */
-/* =================
-   Popover / Tooltips
-==================== */
 /* Popover */
 .popover {
   font-family: inherit;
@@ -52,7 +19,7 @@ File: Components
 }
 /* Tooltips */
 .tooltip {
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .tooltip .tooltip-inner {
   padding: 4px 10px;
@@ -278,8 +245,8 @@ File: Components
   border: 1px solid #5c4fab !important;
 }
 .btn-pink {
-  background-color: #F06292 !important;
-  border: 1px solid #F06292 !important;
+  background-color: #f06292 !important;
+  border: 1px solid #f06292 !important;
 }
 .btn-pink:hover,
 .btn-pink:focus,
@@ -454,7 +421,7 @@ File: Components
   margin-top: 0;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .panel-sub-title {
   margin-bottom: 0px;
@@ -490,7 +457,7 @@ File: Components
   background-color: #6b5fb5;
 }
 .panel-pink > .panel-heading {
-  background-color: #F06292;
+  background-color: #f06292;
 }
 .panel-orange > .panel-heading {
   background-color: #ff9800;
@@ -542,8 +509,8 @@ File: Components
   color: #6b5fb5 !important;
 }
 .panel-border.panel-pink .panel-heading {
-  border-color: #F06292 !important;
-  color: #F06292 !important;
+  border-color: #f06292 !important;
+  color: #f06292 !important;
 }
 .panel-border.panel-orange .panel-heading {
   border-color: #ff9800 !important;
@@ -591,7 +558,7 @@ File: Components
   margin-top: 9px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .portlet .portlet-heading .portlet-widgets {
   display: inline-block;
@@ -701,7 +668,7 @@ File: Components
   display: inline-block;
   padding-left: 5px;
   position: relative;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   font-weight: normal;
 }
 .checkbox label::before {
@@ -749,7 +716,7 @@ File: Components
 }
 .checkbox input[type="checkbox"]:checked + label::after {
   content: "\F12C";
-  font-family: 'Material Design Icons';
+  font-family: "Material Design Icons";
   font-weight: bold;
 }
 .checkbox input[type="checkbox"]:disabled + label::before {
@@ -815,8 +782,8 @@ File: Components
   color: #ffffff;
 }
 .checkbox-pink input[type="checkbox"]:checked + label::before {
-  background-color: #F06292;
-  border-color: #F06292;
+  background-color: #f06292;
+  border-color: #f06292;
 }
 .checkbox-pink input[type="checkbox"]:checked + label::after {
   color: #ffffff;
@@ -836,7 +803,7 @@ File: Components
   display: inline-block;
   padding-left: 5px;
   position: relative;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   font-weight: normal;
 }
 .radio label::before {
@@ -966,13 +933,13 @@ File: Components
   background-color: #6b5fb5;
 }
 .radio-pink input[type="radio"] + label::after {
-  background-color: #F06292;
+  background-color: #f06292;
 }
 .radio-pink input[type="radio"]:checked + label::before {
-  border-color: #F06292;
+  border-color: #f06292;
 }
 .radio-pink input[type="radio"]:checked + label::after {
-  background-color: #F06292;
+  background-color: #f06292;
 }
 /* =============
    Modals
@@ -980,7 +947,7 @@ File: Components
 .modal .modal-dialog .modal-content {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
-  border-color: #DDDDDD;
+  border-color: #dddddd;
   border-radius: 2px;
   box-shadow: none;
   padding: 25px;
@@ -1053,7 +1020,7 @@ File: Components
   color: #313a46;
   text-transform: uppercase;
   font-weight: 600;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .nav-tabs > li > a:hover {
   background-color: rgba(152, 166, 173, 0.1);
@@ -1081,7 +1048,7 @@ File: Components
   text-align: center;
   white-space: nowrap;
   font-weight: 600;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   text-transform: uppercase;
 }
 .tabs-vertical-env .nav.tabs-vertical li.active > a {
@@ -1178,7 +1145,7 @@ File: Components
   background-color: #6b5fb5;
 }
 .progress-bar-pink {
-  background-color: #F06292;
+  background-color: #f06292;
 }
 .progress-bar-custom {
   background-color: #7fc1fc;
@@ -1284,7 +1251,7 @@ File: Components
 }
 .alert .alert-link {
   font-weight: 600;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .alert-icon {
   padding-left: 50px;
@@ -1569,7 +1536,7 @@ File: Components
   border-left-color: #3b3e47;
 }
 .tilebox-pink {
-  border-left-color: #F06292;
+  border-left-color: #f06292;
 }
 .tilebox-purple {
   border-left-color: #6b5fb5;
@@ -1657,7 +1624,7 @@ File: Components
   font-size: 12px;
   font-style: normal;
   font-weight: bold;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   position: relative;
 }
 .conversation-list .ctext-wrap p {
@@ -1733,7 +1700,7 @@ File: Components
   border-bottom: none;
 }
 .todo-list label {
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
 }
 .todo-send {
   padding-left: 0;
@@ -1747,7 +1714,7 @@ File: Components
   line-height: 32px;
   text-align: center;
   border-radius: 50%;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   font-size: 16px;
 }
 /* =============
@@ -1759,7 +1726,7 @@ File: Components
   padding: 8px 16px;
   height: auto;
   font-weight: 600;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -moz-border-radius: 3px;
@@ -1794,7 +1761,7 @@ File: Components
   padding: 8px 16px 8px 46px;
   background: #f3f3f3;
   font-weight: 600;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .custom-dd-empty .dd-list .dd3-content:hover {
   color: #7fc1fc;
@@ -1859,12 +1826,12 @@ File: Components
 .fc-toolbar h2 {
   font-size: 18px;
   font-weight: 600;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   line-height: 30px;
   text-transform: uppercase;
 }
 .fc-day-grid-event .fc-time {
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .fc-day {
   background: #ffffff;
@@ -1962,7 +1929,7 @@ File: Components
 }
 .external-event.bg-pink {
   background-color: rgba(240, 98, 146, 0.3) !important;
-  color: #F06292;
+  color: #f06292;
 }
 .external-event.bg-purple {
   background-color: rgba(107, 95, 181, 0.3) !important;
@@ -1987,12 +1954,12 @@ File: Components
 .fc-basic-view td.fc-week-number span {
   padding-right: 8px;
   font-weight: 700;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .fc-basic-view td.fc-day-number {
   padding-right: 8px;
   font-weight: 700;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 /* =============
    Form
@@ -2000,7 +1967,7 @@ File: Components
 /* Form components */
 label {
   font-weight: 600;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 textarea.form-control {
   min-height: 90px;
@@ -2164,7 +2131,7 @@ input[data-switch] + label:before {
   transition: all 0.1s ease-in-out;
 }
 input[data-switch] + label:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 3px;
   background-color: #f7f7f7;
@@ -2218,7 +2185,7 @@ input[data-switch="inverse"]:checked + label {
   background-color: #3b3e47;
 }
 input[data-switch="pink"]:checked + label {
-  background-color: #F06292;
+  background-color: #f06292;
 }
 input[data-switch="purple"]:checked + label {
   background-color: #6b5fb5;
@@ -2343,14 +2310,14 @@ input[data-switch="teal"]:checked + label {
 }
 .btn-switch-pink > input[type="checkbox"] + .btn,
 .btn-switch-pink > input[type="checkbox"]:checked + .btn > em {
-  color: #F06292 !important;
+  color: #f06292 !important;
 }
 .btn-switch-pink > input[type="checkbox"] + .btn,
 .btn-switch-pink > input[type="checkbox"] + .btn > em {
-  border-color: #F06292 !important;
+  border-color: #f06292 !important;
 }
 .btn-switch-pink > input[type="checkbox"]:checked + .btn {
-  background-color: #F06292 !important;
+  background-color: #f06292 !important;
 }
 .btn-switch-purple > input[type="checkbox"] + .btn,
 .btn-switch-purple > input[type="checkbox"]:checked + .btn > em {
@@ -2401,7 +2368,8 @@ input[data-switch="teal"]:checked + label {
   margin-bottom: 10px;
 }
 .ms-container {
-  background: transparent url('../plugins/multiselect/img/multiple-arrow.png') no-repeat 50% 50%;
+  background: transparent url("../plugins/multiselect/img/multiple-arrow.png")
+    no-repeat 50% 50%;
   width: 100% !important;
   max-width: 360px !important;
 }
@@ -2436,7 +2404,7 @@ input[data-switch="teal"]:checked + label {
   width: 100% !important;
 }
 .select2-container .select2-selection--single {
-  border: 1px solid #E3E3E3 !important;
+  border: 1px solid #e3e3e3 !important;
   height: 38px !important;
 }
 .select2-container .select2-selection--single .select2-selection__rendered {
@@ -2452,11 +2420,15 @@ input[data-switch="teal"]:checked + label {
   border-color: #999 transparent transparent transparent;
   border-width: 6px 6px 0 6px;
 }
-.select2-container--open .select2-selection--single .select2-selection__arrow b {
+.select2-container--open
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
   border-color: transparent transparent #999 transparent !important;
   border-width: 0 6px 6px 6px !important;
 }
-.select2-container--default .select2-results__option--highlighted[aria-selected] {
+.select2-container--default
+  .select2-results__option--highlighted[aria-selected] {
   background-color: #7fc1fc;
 }
 .select2-results__option {
@@ -2525,7 +2497,9 @@ input[data-switch="teal"]:checked + label {
   display: block;
 }
 /* Bootstrap-select */
-.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(
+    .input-group-btn
+  ) {
   width: 100% !important;
 }
 .bootstrap-select .dropdown-toggle:focus {
@@ -2628,7 +2602,7 @@ input[data-switch="teal"]:checked + label {
   color: #313a46;
   font-weight: 600;
   font-size: 12px;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .daterangepicker select.hourselect,
 .daterangepicker select.minuteselect,
@@ -2677,12 +2651,12 @@ input[data-switch="teal"]:checked + label {
 .wizard > .steps a {
   font-size: 16px;
   text-align: center;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .wizard > .steps .number {
   font-size: 86px;
   line-height: 86px;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   position: absolute;
   left: 10px;
   top: -14px;
@@ -2841,7 +2815,7 @@ input[data-switch="teal"]:checked + label {
   background-color: #7fc1fc !important;
 }
 .mce-window-head .mce-title {
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .mce-window {
   padding: 20px !important;
@@ -2868,7 +2842,7 @@ input[data-switch="teal"]:checked + label {
    Tables
 ============= */
 th {
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   font-weight: 600;
 }
 .table-centered td {
@@ -2901,12 +2875,18 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
   box-shadow: 0 0 3px rgba(67, 89, 102, 0.2);
   background-color: #4bd396;
 }
-table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
-table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+table.dataTable.dtr-inline.collapsed
+  > tbody
+  > tr.parent
+  > td:first-child:before,
+table.dataTable.dtr-inline.collapsed
+  > tbody
+  > tr.parent
+  > th:first-child:before {
   background-color: #f5707a;
 }
 table.dataTable > tbody > tr.child span.dtr-title {
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 /* ColVid Tables */
 div.ColVis {
@@ -3008,9 +2988,12 @@ ul.ColVis_collection li {
 }
 .table-rep-plugin .checkbox-row input[type="checkbox"]:checked + label::after {
   content: "\f00c";
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
 }
-.table-rep-plugin .checkbox-row input[type="checkbox"]:disabled + label::before {
+.table-rep-plugin
+  .checkbox-row
+  input[type="checkbox"]:disabled
+  + label::before {
   background-color: #eeeeee;
   cursor: not-allowed;
 }
@@ -3122,7 +3105,7 @@ table.dataTable thead th.sorting_desc:after {
 .tablesaw thead tr:first-child th {
   font-weight: 600;
   border: none;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .tablesaw td {
   border-top: 1px solid rgba(243, 243, 243, 0.7) !important;
@@ -3137,15 +3120,23 @@ table.dataTable thead th.sorting_desc:after {
 .tablesaw tbody tr {
   border-bottom: none;
 }
-.tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-ascending button:after,
-.tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-descending button:after {
+.tablesaw-sortable
+  .tablesaw-sortable-head.tablesaw-sortable-ascending
+  button:after,
+.tablesaw-sortable
+  .tablesaw-sortable-head.tablesaw-sortable-descending
+  button:after {
   font-family: FontAwesome;
   font-size: 10px;
 }
-.tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-ascending button:after {
+.tablesaw-sortable
+  .tablesaw-sortable-head.tablesaw-sortable-ascending
+  button:after {
   content: "\f176";
 }
-.tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-descending button:after {
+.tablesaw-sortable
+  .tablesaw-sortable-head.tablesaw-sortable-descending
+  button:after {
   content: "\f175";
 }
 .tablesaw-bar .btn-select.btn-small:after,
@@ -3198,7 +3189,7 @@ table.dataTable thead th.sorting_desc:after {
   background-color: #3b3e47;
 }
 .table-colored.table-pink thead th {
-  background-color: #F06292;
+  background-color: #f06292;
 }
 .table-colored.table-purple thead th {
   background-color: #6b5fb5;
@@ -3260,10 +3251,10 @@ table.dataTable thead th.sorting_desc:after {
   background-color: #3b3e47;
 }
 .table-colored-bordered.table-bordered-pink {
-  border: 2px solid #F06292;
+  border: 2px solid #f06292;
 }
 .table-colored-bordered.table-bordered-pink thead th {
-  background-color: #F06292;
+  background-color: #f06292;
 }
 .table-colored-bordered.table-bordered-purple {
   border: 2px solid #6b5fb5;
@@ -3368,10 +3359,10 @@ table.dataTable thead th.sorting_desc:after {
   background-color: rgba(240, 98, 146, 0.8);
 }
 .table-colored-full.table-full-pink thead th {
-  background-color: #F06292;
+  background-color: #f06292;
 }
 .table-colored-full.table-full-pink tbody tr:hover {
-  background-color: #F06292;
+  background-color: #f06292;
 }
 .table-colored-full.table-full-purple {
   background-color: rgba(107, 95, 181, 0.8);
@@ -3429,7 +3420,7 @@ table.dataTable thead th.sorting_desc:after {
 }
 .legend tr {
   height: 20px;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .legendLabel {
   padding-left: 5px !important;
@@ -3532,10 +3523,10 @@ table.dataTable thead th.sorting_desc:after {
   text-align: center;
   pointer-events: none;
   z-index: 1;
-  -webkit-transition: opacity .2s linear;
-  -moz-transition: opacity .2s linear;
-  -o-transition: opacity .2s linear;
-  transition: opacity .2s linear;
+  -webkit-transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
 }
 .chartist-tooltip.tooltip-show {
   opacity: 1;
@@ -3557,7 +3548,7 @@ table.dataTable thead th.sorting_desc:after {
 .c3-chart-arcs-title {
   font-size: 18px;
   font-weight: 600;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 .c3-tooltip tr {
   border: none !important;
@@ -3567,7 +3558,7 @@ table.dataTable thead th.sorting_desc:after {
 }
 .c3-tooltip .value {
   font-weight: 600;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
 }
 /* Sparkline chart */
 .jqstooltip {

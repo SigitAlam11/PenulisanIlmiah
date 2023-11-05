@@ -31,12 +31,8 @@ if (strlen($_SESSION['login']) == 0) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <title>Newsportal | Add User</title>
-
-    <!-- App css -->
+    <title>P4S Purileisa | Add User</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
@@ -46,30 +42,15 @@ if (strlen($_SESSION['login']) == 0) {
     <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../plugins/switchery/switchery.min.css">
     <script src="assets/js/modernizr.min.js"></script>
-
 </head>
-
-
 <body class="fixed-left">
-
-    <!-- Begin page -->
     <div id="wrapper">
-
-        <!-- Top Bar Start -->
         <?php include('includes/topheader.php'); ?>
-        <!-- Top Bar End -->
-
-
-        <!-- ========== Left Sidebar Start ========== -->
         <?php include('includes/leftsidebar.php'); ?>
-        <!-- Left Sidebar End -->
-
         <div class="content-page">
             <!-- Start content -->
             <div class="content">
                 <div class="container">
-
-
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="page-title-box">
@@ -90,111 +71,68 @@ if (strlen($_SESSION['login']) == 0) {
                         </div>
                     </div>
                     <!-- end row -->
-
-
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="card-box">
                                 <h4 class="m-t-0 header-title"><b>Add User </b></h4>
                                 <hr />
-
-
-
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <!---Success Message--->
                                         <?php if ($msg) { ?>
-                                        <div class="alert alert-success" role="alert">
-                                            <strong>Well done!</strong>
-                                            <?php echo htmlentities($msg); ?>
-                                        </div>
+                                            <div class="alert alert-success" role="alert">
+                                                <strong>Well done!</strong>
+                                                <?php echo htmlentities($msg); ?>
+                                            </div>
                                         <?php } ?>
-
                                         <!---Error Message--->
                                         <?php if ($error) { ?>
-                                        <div class="alert alert-danger" role="alert">
-                                            <strong>Oh snap!</strong>
-                                            <?php echo htmlentities($error); ?>
-                                        </div>
+                                            <div class="alert alert-danger" role="alert">
+                                                <strong>Oh snap!</strong>
+                                                <?php echo htmlentities($error); ?>
+                                            </div>
                                         <?php } ?>
-
-
                                     </div>
                                 </div>
-
-
-
-
-
                                 <div class="row">
                                     <div class="col-md-6">
                                         <form class="form-horizontal" name="category" method="post">
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">User</label>
                                                 <div class="col-md-10">
-                                                    <input type="text" class="form-control" value=""
-                                                        name="AdminUserName" required>
+                                                    <input type="text" class="form-control" value="" name="AdminUserName" required>
                                                 </div>
                                             </div>
-
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Email</label>
                                                 <div class="col-md-10">
-                                                    <input type="text" class="form-control" value="" name="AdminEmailId"
-                                                        required>
+                                                    <input type="text" class="form-control" value="" name="AdminEmailId" required>
                                                 </div>
                                             </div>
-
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Password</label>
                                                 <div class="col-md-10">
-                                                    <input type="password" class="form-control" value=""
-                                                        name="AdminPassword" required>
+                                                    <input type="password" class="form-control" value="" name="AdminPassword" required>
                                                 </div>
                                             </div>
-
-
-
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">&nbsp;</label>
                                                 <div class="col-md-10">
 
-                                                    <button type="submit"
-                                                        class="btn btn-custom waves-effect waves-light btn-md"
-                                                        name="submit">
+                                                    <button type="submit" class="btn btn-custom waves-effect waves-light btn-md" name="submit">
                                                         Submit
                                                     </button>
                                                 </div>
                                             </div>
-
                                         </form>
                                     </div>
-
-
                                 </div>
-
-
-
-
-
-
-
-
-
-
-
                             </div>
                         </div>
                     </div>
-                    <!-- end row -->
-
-
                 </div> <!-- container -->
-
             </div> <!-- content -->
-
             <?php include('includes/footer.php'); ?>
-
         </div>
     </div>
 
