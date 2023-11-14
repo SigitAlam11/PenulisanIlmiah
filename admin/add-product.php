@@ -134,13 +134,6 @@ if (strlen($_SESSION['login']) == 0) {
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label class="col-md-2 control-label">Quantity</label>
-                                                    <div class="col-md-10">
-                                                        <input type="number" class="form-control" value="" name="quantity" required>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
                                                     <label class="col-md-2 control-label">Picture 1</label>
                                                     <div class="col-md-10">
                                                         <input type="file" name="picture1">

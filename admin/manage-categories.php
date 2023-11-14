@@ -10,12 +10,6 @@ if (strlen($_SESSION['login']) == 0) {
         $query = mysqli_query($con, "update tblcategory set Is_Active='0' where id='$id'");
         $msg = "Category deleted ";
     }
-    // Code for restore
-    if ($_GET['resid']) {
-        $id = intval($_GET['resid']);
-        $query = mysqli_query($con, "update tblcategory set Is_Active='1' where id='$id'");
-        $msg = "Category restored successfully";
-    }
     // Code for Forever deletionparmdel
     if ($_GET['action'] == 'parmdel' && $_GET['rid']) {
         $id = intval($_GET['rid']);
@@ -115,52 +109,6 @@ if (strlen($_SESSION['login']) == 0) {
                                                             <td><?php echo htmlentities($row['UpdationDate']); ?></td>
                                                             <td><a href="edit-category.php?cid=<?php echo htmlentities($row['id']); ?>"><i class="fa fa-pencil" style="color: #29b6f6;"></i></a>
                                                                 &nbsp;<a href="manage-categories.php?rid=<?php echo htmlentities($row['id']); ?>&&action=del"> <i class="fa fa-trash-o" style="color: #f05050"></i></a> </td>
-                                                        </tr>
-                                                    <?php
-                                                        $cnt++;
-                                                    } ?>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="demo-box m-t-20">
-                                        <div class="m-b-30">
-
-                                            <h4><i class="fa fa-trash-o"></i> Deleted Categories</h4>
-
-                                        </div>
-
-                                        <div class="table-responsive">
-                                            <table class="table m-0 table-colored-bordered table-bordered-danger">
-                                                <thead>
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th> Category</th>
-                                                        <th>Description</th>
-                                                        <th>Posting Date</th>
-                                                        <th>Last updation Date</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <?php
-                                                    $query = mysqli_query($con, "Select id,CategoryName,Description,PostingDate,UpdationDate from tblcategory where Is_Active=0");
-                                                    $cnt = 1;
-                                                    while ($row = mysqli_fetch_array($query)) {
-                                                    ?>
-
-                                                        <tr>
-                                                            <th scope="row"><?php echo htmlentities($cnt); ?></th>
-                                                            <td><?php echo htmlentities($row['CategoryName']); ?></td>
-                                                            <td><?php echo htmlentities($row['Description']); ?></td>
-                                                            <td><?php echo htmlentities($row['PostingDate']); ?></td>
-                                                            <td><?php echo htmlentities($row['UpdationDate']); ?></td>
-                                                            <td><a href="manage-categories.php?resid=<?php echo htmlentities($row['id']); ?>"><i class="ion-arrow-return-right" title="Restore this category"></i></a>
-                                                                &nbsp;<a href="manage-categories.php?rid=<?php echo htmlentities($row['id']); ?>&&action=parmdel" title="Delete forever"> <i class="fa fa-trash-o" style="color: #f05050"></i> </td>
                                                         </tr>
                                                     <?php
                                                         $cnt++;
