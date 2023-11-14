@@ -8,6 +8,7 @@ if (strlen($_SESSION['login']) == 0) {
 ?>
     <!DOCTYPE html>
     <html lang="en">
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +35,7 @@ if (strlen($_SESSION['login']) == 0) {
         <div id="wrapper">
             <div class="topbar">
                 <div class="topbar-left">
-                    <a href="index.php" class="logo"><span>NP<span>Admin</span></span><i class="mdi mdi-layers"></i></a>
+                    <a href="index.php" class="logo"></a>
                 </div>
                 <?php include('includes/topheader.php'); ?>
             </div>
@@ -53,9 +54,7 @@ if (strlen($_SESSION['login']) == 0) {
                                         <li>
                                             <a href="#">Admin</a>
                                         </li>
-                                        <li class="active">
-                                            Dashboard
-                                        </li>
+                                        <li class="active">Dashboard</li>
                                     </ol>
                                     <div class="clearfix"></div>
                                 </div>
@@ -65,31 +64,16 @@ if (strlen($_SESSION['login']) == 0) {
                             <a href="manage-categories.php">
                                 <div class="col-lg-4 col-md-4 col-sm-6">
                                     <div class="card-box widget-box-one">
-                                        <i class="mdi mdi-chart-areaspline widget-one-icon"></i>
                                         <div class="wigdet-one-content">
-                                            <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="Statistics">Categories Listed</p>
-                                            <?php $query = mysqli_query($con, "select * from tblcategory where Is_Active=1");
-                                            $countcat = mysqli_num_rows($query);
-                                            ?>
-                                            <h2>
-                                                <?php echo htmlentities($countcat); ?> <small></small>
-                                            </h2>
-
+                                            <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="Statistics">List Caetgory</p>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="manage-subcategories.php">
                                     <div class="col-lg-4 col-md-4 col-sm-6">
                                         <div class="card-box widget-box-one">
-                                            <i class="mdi mdi-layers widget-one-icon"></i>
                                             <div class="wigdet-one-content">
-                                                <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">Listed Subcategories</p>
-                                                <?php $query = mysqli_query($con, "select * from tblsubcategory where Is_Active=1");
-                                                $countsubcat = mysqli_num_rows($query);
-                                                ?>
-                                                <h2>
-                                                    <?php echo htmlentities($countsubcat); ?> <small></small>
-                                                </h2>
+                                                <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">List Sub Category</p>
                                             </div>
                                         </div>
                                     </div><!-- end col -->
@@ -97,38 +81,34 @@ if (strlen($_SESSION['login']) == 0) {
                                 <a href="manage-posts.php">
                                     <div class="col-lg-4 col-md-4 col-sm-6">
                                         <div class="card-box widget-box-one">
-                                            <i class="mdi mdi-layers widget-one-icon"></i>
                                             <div class="wigdet-one-content">
-                                                <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">Live News</p>
-                                                <?php $query = mysqli_query($con, "select * from tblposts where Is_Active=1");
-                                                $countposts = mysqli_num_rows($query);
-                                                ?>
-                                                <h2>
-                                                    <?php echo htmlentities($countposts); ?> <small></small>
-                                                </h2>
+                                                <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">List Post Berita</p>
                                             </div>
                                         </div>
                                     </div><!-- end col -->
                                 </a>
                         </div>
                         <div class="row">
-                            <a href="trash-posts.php">
+                            <a href="manage-products.php">
                                 <div class="col-lg-4 col-md-4 col-sm-6">
                                     <div class="card-box widget-box-one">
-                                        <i class="mdi mdi-layers widget-one-icon"></i>
                                         <div class="wigdet-one-content">
-                                            <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">Trash News</p>
-                                            <?php $query = mysqli_query($con, "select * from tblposts where Is_Active=0");
-                                            $countposts = mysqli_num_rows($query);
-                                            ?>
-                                            <h2>
-                                                <?php echo htmlentities($countposts); ?> <small></small>
-                                            </h2>
+                                            <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="Statistics">List Produk</p>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                                <a href="manage-users.php">
+                                    <div class="col-lg-4 col-md-4 col-sm-6">
+                                        <div class="card-box widget-box-one">
+                                            <div class="wigdet-one-content">
+                                                <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">List User</p>
+                                            </div>
+                                        </div>
+                                    </div><!-- end col -->
+                                </a>
                         </div>
+
+
                     </div> <!-- container -->
                 </div> <!-- content -->
                 <?php include('includes/footer.php'); ?>

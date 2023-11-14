@@ -11,11 +11,7 @@ if (strlen($_SESSION['login']) == 0) {
         $password = $_POST['AdminPassword'];
         $email = $_POST['AdminEmailId'];
         $status = 1;
-
-        // Hash kata sandi menggunakan password_hash() dengan bcrypt
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-
-        // Selanjutnya, masukkan hashedPassword ke dalam database
         $query = mysqli_query($con, "INSERT INTO tbladmin (AdminUserName, AdminPassword, AdminEmailId, Is_Active) VALUES ('$username', '$hashedPassword', '$email', '$status')");
 
         if ($query) {
@@ -31,6 +27,7 @@ if (strlen($_SESSION['login']) == 0) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>P4S Purileisa | Add User</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -43,6 +40,7 @@ if (strlen($_SESSION['login']) == 0) {
     <link rel="stylesheet" href="../plugins/switchery/switchery.min.css">
     <script src="assets/js/modernizr.min.js"></script>
 </head>
+
 <body class="fixed-left">
     <div id="wrapper">
         <?php include('includes/topheader.php'); ?>
