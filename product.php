@@ -2,7 +2,6 @@
 session_start();
 include('includes/config.php');
 
-
 $query = mysqli_query($con, "SELECT * FROM tblproducts");
 
 
