@@ -93,7 +93,6 @@ if (strlen($_SESSION['login']) == 0) {
                                             <table class="table table-colored table-centered table-inverse m-0">
                                                 <thead>
                                                     <tr>
-
                                                         <th>Title</th>
                                                         <th>Category</th>
                                                         <th>Subcategory</th>
