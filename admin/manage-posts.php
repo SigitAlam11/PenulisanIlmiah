@@ -19,6 +19,7 @@ if (strlen($_SESSION['login']) == 0) {
 
     <!DOCTYPE html>
     <html lang="en">
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,11 +73,15 @@ if (strlen($_SESSION['login']) == 0) {
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card-box">
+                                    <div class="m-b-30">
+                                        <a href="add-post.php">
+                                            <button id="addToTable" class="btn btn-success waves-effect waves-light">Add <i class="mdi mdi-plus-circle-outline"></i></button>
+                                        </a>
+                                    </div>
                                     <div class="table-responsive">
                                         <table class="table table-colored table-centered table-inverse m-0">
                                             <thead>
                                                 <tr>
-
                                                     <th>Title</th>
                                                     <th>Category</th>
                                                     <th>Subcategory</th>

@@ -74,13 +74,13 @@ if (strlen($_SESSION['login']) == 0) {
 
                                 <?php if ($msg) { ?>
                                     <div class="alert alert-success" role="alert">
-                                        <strong>Well done!</strong> <?php echo htmlentities($msg); ?>
+                                        <strong>Bagus!</strong> <?php echo htmlentities($msg); ?>
                                     </div>
                                 <?php } ?>
 
                                 <?php if ($delmsg) { ?>
                                     <div class="alert alert-danger" role="alert">
-                                        <strong>Oh snap!</strong> <?php echo htmlentities($delmsg); ?>
+                                        <strong>Oh tidak!</strong> <?php echo htmlentities($delmsg); ?>
                                     </div>
                                 <?php } ?>
                             </div>
@@ -99,7 +99,6 @@ if (strlen($_SESSION['login']) == 0) {
                                                     <tr>
                                                         <th>#</th>
                                                         <th>Username</th>
-                                                        <th>Password</th>
                                                         <th>Email</th>
                                                         <th>Status</th>
                                                         <th>Creation Date</th>
@@ -109,14 +108,13 @@ if (strlen($_SESSION['login']) == 0) {
                                                 </thead>
                                                 <tbody>
                                                     <?php
-                                                    $query = mysqli_query($con, "Select id,AdminUserName,AdminPassword,AdminEmailId,Is_Active,CreationDate,UpdationDate from  tbladmin");
+                                                    $query = mysqli_query($con, "Select id,AdminUserName,AdminEmailId,Is_Active,CreationDate,UpdationDate from  tbladmin");
                                                     $cnt = 1;
                                                     while ($row = mysqli_fetch_array($query)) {
                                                     ?>
                                                         <tr>
                                                             <th scope="row"><?php echo htmlentities($cnt); ?></th>
                                                             <td><?php echo htmlentities($row['AdminUserName']); ?></td>
-                                                            <td><?php echo htmlentities($row['AdminPassword']); ?></td>
                                                             <td><?php echo htmlentities($row['AdminEmailId']); ?></td>
                                                             <td><?php echo ($row['Is_Active'] == 1) ? 'Aktif' : 'Tidak Aktif'; ?></td>
                                                             <td><?php echo htmlentities($row['CreationDate']); ?></td>

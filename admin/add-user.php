@@ -11,8 +11,7 @@ if (strlen($_SESSION['login']) == 0) {
         $password = $_POST['AdminPassword'];
         $email = $_POST['AdminEmailId'];
         $status = 1;
-        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-        $query = mysqli_query($con, "INSERT INTO tbladmin (AdminUserName, AdminPassword, AdminEmailId, Is_Active) VALUES ('$username', '$hashedPassword', '$email', '$status')");
+        $query = mysqli_query($con, "INSERT INTO tbladmin (AdminUserName, AdminPassword, AdminEmailId, Is_Active) VALUES ('$username', '$password', '$email', '$status')");
 
         if ($query) {
             $msg = "User created successfully.";
