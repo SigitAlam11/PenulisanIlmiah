@@ -2,7 +2,6 @@
 session_start();
 include('includes/config.php');
 
-
 $query = mysqli_query($con, "SELECT * FROM tblproducts");
 
 
@@ -42,42 +41,48 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
     <div class="d-flex flex-column">
         <?php while ($row = mysqli_fetch_assoc($query)) { ?>
             <!-- Product -->
-            <div class="content-product row mb-4"> <!-- Create a new row for each product -->
-                <div class="col-md-6 d-flex flex-row justify-content-center align-items-center">
-                    <?php
-                    $carouselID = "productCarousel" . $row['id']; // Unique ID for each carousel
-                    ?>
-                    <div id="<?php echo $carouselID; ?>" class="w-100 carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <?php
-                            $images = array($row['picture1'], $row['picture2'], $row['picture3']);
-                            foreach ($images as $index => $image) {
-                                $activeClass = ($index === 0) ? 'active' : '';
-                            ?>
-                                <div class="carousel-item ps-3 pe-3  <?php echo $activeClass; ?>">
-                                    <img src="admin/uploads/<?php echo $image; ?>" alt="Product Image<?php echo $index + 1; ?>" class="carousel-image" />
-                                </div>
-                            <?php } ?>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
+            <div class="content-product mb-4 d-flex flex-row justify-content-center "> <!-- Create a new row for each product -->
+                <div class="row container-lg">
 
-                <div class="col-md-6 d-flex flex-row justify-content-center">
-                    <div class="product-detail w-100">
-                        <div class="text-product-detail px-2">
-                            <h1><?php echo $row['name']; ?></h1>
-                            <h2>Rp <?php echo $row['price']; ?></h2>
-                            <p><?php echo $row['description']; ?></p>
+
+                    <!-- Image -->
+                    <div class="col col-md-6 d-flex flex-row  align-items-center">
+                        <?php
+                            $carouselID = "productCarousel" . $row['id']; // Unique ID for each carousel
+                        ?>
+                        <div id="<?php echo $carouselID; ?>" class="w-100 carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <?php
+                                    $images = array($row['picture1'], $row['picture2'], $row['picture3']);
+                                    foreach ($images as $index => $image) {
+                                        $activeClass = ($index === 0) ? 'active' : '';
+                                ?>
+                                    <div class="carousel-item ps-3 pe-3  <?php echo $activeClass; ?>">
+                                        <img src="admin/uploads/<?php echo $image; ?>" alt="Product Image<?php echo $index + 1; ?>" class="carousel-image" />
+                                    </div>
+                                <?php } ?>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#<?php echo $carouselID; ?>" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                        <a class="btn btn-success ms-2" href="https://wa.me/6282258332033">Beli Sekarang</a>
+                    </div>
+
+                    <!-- detail image product -->
+                    <div class="col col-md-6 d-flex flex-row justify-content-center">
+                        <div class="product-detail w-100">
+                            <div class="text-product-detail px-2">
+                                <h1><?php echo $row['name']; ?></h1>
+                                <h2>Rp <?php echo $row['price']; ?></h2>
+                                <p><?php echo $row['description']; ?></p>
+                            </div>
+                            <a class="btn btn-success ms-2" href="https://wa.me/6282258332033">Beli Sekarang</a>
+                        </div>
                     </div>
                 </div>
             </div>

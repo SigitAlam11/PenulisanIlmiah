@@ -27,6 +27,7 @@ include('includes/config.php');
 </head>
 
 <body>
+    <?php include('includes/header.php'); ?>
     <div class="container">
         <div class="container">
             <div class="headdaftar">
