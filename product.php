@@ -25,7 +25,8 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar">
+<body data-bs-spy="scroll" data-bs-target=".navbar">  
+<?php include('includes/header.php'); ?>
     <div class="container">
         <div class="headdaftar">
             <h1 class="text-center text-success font-weight-bold">Produk Kami<br> apa yang kami buat pasti Bermanfaat!
@@ -40,15 +41,13 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
 
     <div class="d-flex flex-column">
         <?php while ($row = mysqli_fetch_assoc($query)) { ?>
-            <!-- Product -->
-            <div class="content-product mb-4 d-flex flex-row justify-content-center "> <!-- Create a new row for each product -->
+            <div class="content-product mb-4 d-flex flex-row justify-content-center "> 
                 <div class="row container-lg">
 
 
-                    <!-- Image -->
                     <div class="col col-md-6 d-flex flex-row  align-items-center">
                         <?php
-                            $carouselID = "productCarousel" . $row['id']; // Unique ID for each carousel
+                            $carouselID = "productCarousel" . $row['id']; 
                         ?>
                         <div id="<?php echo $carouselID; ?>" class="w-100 carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
@@ -73,7 +72,7 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
                         </div>
                     </div>
 
-                    <!-- detail image product -->
+                    
                     <div class="col col-md-6 d-flex flex-row justify-content-center">
                         <div class="product-detail w-100">
                             <div class="text-product-detail px-2">

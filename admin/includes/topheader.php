@@ -1,6 +1,6 @@
             <div class="topbar">
                 <div class="topbar-left custom-bg-colors">
-                    <a href="../index.php" class="logo">P4S<span>Purileisa</span><i class="mdi mdi-layers"></i></a>
+                    <a href="../index.php" class="logo">P4S<span>Purileisa</span></i></a>
 
                 </div>
                 <div class="navbar navbar-default" role="navigation">
