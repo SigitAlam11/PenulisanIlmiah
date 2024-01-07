@@ -29,7 +29,7 @@
             <div class="line"></div>
             <ul>
               <li>Kalimantan Timur, Kota Samarinda</li>
-              <li>(+62) 812 - 3456 - 7890</li>
+              <li>(+62) 813-5200-8196</li>
               <li>P4SPurileisa@gmail.com</li>
             </ul>
           </div>

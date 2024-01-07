@@ -80,7 +80,7 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
                                 <h2>Rp <?php echo $row['price']; ?></h2>
                                 <p><?php echo $row['description']; ?></p>
                             </div>
-                            <a class="btn btn-success ms-2" href="https://wa.me/6282258332033">Beli Sekarang</a>
+                            <a class="btn btn-success ms-2" href="https://wa.me/6281352008196">Beli Sekarang</a>
                         </div>
                     </div>
                 </div>

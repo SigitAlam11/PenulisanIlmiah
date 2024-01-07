@@ -396,7 +396,7 @@ include('includes/config.php');
             <div class="line"></div>
             <ul>
               <li>Kalimantan Timur, Kota Samarinda</li>
-              <li>(+62) 812 - 3456 - 7890</li>
+              <li>(+62) 813-5200-8196</li>
               <li>P4SPurileisa@gmail.com</li>
             </ul>
           </div>
@@ -411,7 +411,6 @@ include('includes/config.php');
   <script src="./assets/js/main.js"></script>
   <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
   <script async src="//www.instagram.com/embed.js"></script>
-  <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="YOUR_NONCE_VALUE_HERE"></script> -->
 </body>
 
 </html>
