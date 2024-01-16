@@ -71,13 +71,6 @@ if (strlen($_SESSION['login']) == 0) {
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-6">
-                                <?php if ($msg) { ?>
-                                    <div class="alert alert-success" role="alert">
-                                        <strong>Well done!</strong> <?php echo htmlentities($msg); ?>
-                                    </div>
-                                <?php } ?>
-                        <div class="row">
                             <div class="col-sm-12">
                                 <div class="card-box">
                                     <div class="m-b-30">
