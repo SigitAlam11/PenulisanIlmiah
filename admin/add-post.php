@@ -23,9 +23,9 @@ if (strlen($_SESSION['login']) == 0) {
             $status = 1;
             $query = mysqli_query($con, "insert into tblposts(PostTitle,CategoryId,SubCategoryId,PostDetails,PostUrl,Is_Active,PostImage) values('$posttitle','$catid','$subcatid','$postdetails','$url','$status','$imgnewfile')");
             if ($query) {
-                $msg = "Post successfully added ";
+                $msg = "Berita Berhasil Ditambahkan";
             } else {
-                $error = "Something went wrong . Please try again.";
+                $error = "Terdapat Kesalahan, Silahkan Coba Lagi!";
             }
         }
     }
@@ -99,12 +99,12 @@ if (strlen($_SESSION['login']) == 0) {
                             <div class="col-sm-6">
                                 <?php if ($msg) { ?>
                                     <div class="alert alert-success" role="alert">
-                                        <strong>Well done!</strong> <?php echo htmlentities($msg); ?>
+                                        <?php echo htmlentities($msg); ?>
                                     </div>
                                 <?php } ?>
                                 <?php if ($error) { ?>
                                     <div class="alert alert-danger" role="alert">
-                                        <strong>Oh snap!</strong> <?php echo htmlentities($error); ?>
+                                        <?php echo htmlentities($error); ?>
                                     </div>
                                 <?php } ?>
                             </div>

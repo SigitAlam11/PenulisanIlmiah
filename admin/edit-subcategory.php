@@ -12,9 +12,9 @@ if (strlen($_SESSION['login']) == 0) {
         $subcatdescription = $_POST['sucatdescription'];
         $query = mysqli_query($con, "update tblsubcategory set CategoryId='$categoryid',Subcategory='$subcatname',SubCatDescription='$subcatdescription' where SubCategoryId='$subcatid'");
         if ($query) {
-            $msg = "Sub-Category created ";
+            $msg = "Sub-Category Berhasil Diperbaharui! ";
         } else {
-            $error = "Something went wrong . Please try again.";
+            $error = "Terdapat Kesalahan, Silahkan Lakukan Kembali!";
         }
     }
 
@@ -76,13 +76,13 @@ if (strlen($_SESSION['login']) == 0) {
                                             <!---Success Message--->
                                             <?php if ($msg) { ?>
                                                 <div class="alert alert-success" role="alert">
-                                                    <strong>Well done!</strong> <?php echo htmlentities($msg); ?>
+                                                    <?php echo htmlentities($msg); ?>
                                                 </div>
                                             <?php } ?>
                                             <!---Error Message--->
                                             <?php if ($error) { ?>
                                                 <div class="alert alert-danger" role="alert">
-                                                    <strong>Oh snap!</strong> <?php echo htmlentities($error); ?>
+                                                    <?php echo htmlentities($error); ?>
                                                 </div>
                                             <?php } ?>
                                         </div>

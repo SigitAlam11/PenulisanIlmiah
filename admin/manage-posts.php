@@ -10,9 +10,9 @@ if (strlen($_SESSION['login']) == 0) {
         $postid = intval($_GET['pid']);
         $query = mysqli_query($con, "update tblposts set Is_Active=0 where id='$postid'");
         if ($query) {
-            $msg = "Post deleted ";
+            $msg = "Berita Berhasil Dihapus ";
         } else {
-            $error = "Something went wrong . Please try again.";
+            $error = "Terdapat Kesalahan, Silahkan Ulangi Kembali!";
         }
     }
 ?>
@@ -70,6 +70,13 @@ if (strlen($_SESSION['login']) == 0) {
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <?php if ($msg) { ?>
+                                    <div class="alert alert-success" role="alert">
+                                        <strong>Well done!</strong> <?php echo htmlentities($msg); ?>
+                                    </div>
+                                <?php } ?>
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card-box">

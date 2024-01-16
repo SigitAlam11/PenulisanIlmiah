@@ -25,10 +25,10 @@ if (strlen($_SESSION['login']) == 0) {
             if (password_verify($password, $dbpassword)) {
 
                 $con = mysqli_query($con, "update tbladmin set AdminPassword='$newhashedpass', updationDate='$currentTime' where AdminUserName='$adminid'");
-                $msg = "Password Changed Successfully !!";
+                $msg = "Kata Sandi Berhasil di ubah";
             }
         } else {
-            $error = "Old Password not match !!";
+            $error = "Password lama tidak sama dengan masukannya";
         }
     }
 
@@ -107,13 +107,13 @@ if (strlen($_SESSION['login']) == 0) {
                                             <!---Success Message--->
                                             <?php if ($msg) { ?>
                                                 <div class="alert alert-success" role="alert">
-                                                    <strong>Well done!</strong> <?php echo htmlentities($msg); ?>
+                                                    <?php echo htmlentities($msg); ?>
                                                 </div>
                                             <?php } ?>
                                             <!---Error Message--->
                                             <?php if ($error) { ?>
                                                 <div class="alert alert-danger" role="alert">
-                                                    <strong>Oh snap!</strong> <?php echo htmlentities($error); ?>
+                                                    <?php echo htmlentities($error); ?>
                                                 </div>
                                             <?php } ?>
                                         </div>

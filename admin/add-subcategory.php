@@ -12,9 +12,9 @@ if (strlen($_SESSION['login']) == 0) {
         $status = 1;
         $query = mysqli_query($con, "insert into tblsubcategory(CategoryId,Subcategory,SubCatDescription,Is_Active) values('$categoryid','$subcatname','$subcatdescription','$status')");
         if ($query) {
-            $msg = "Sub-Category created ";
+            $msg = "Sub-Category Berhasil Ditambahkan ";
         } else {
-            $error = "Something went wrong . Please try again.";
+            $error = "Terdapat Kesalahan, Silahkan Tambahkan Ulang!";
         }
     }
 
@@ -74,13 +74,13 @@ if (strlen($_SESSION['login']) == 0) {
                                             <!---Success Message--->
                                             <?php if ($msg) { ?>
                                                 <div class="alert alert-success" role="alert">
-                                                    <strong>Well done!</strong> <?php echo htmlentities($msg); ?>
+                                                   <?php echo htmlentities($msg); ?>
                                                 </div>
                                             <?php } ?>
                                             <!---Error Message--->
                                             <?php if ($error) { ?>
                                                 <div class="alert alert-danger" role="alert">
-                                                    <strong>Oh snap!</strong> <?php echo htmlentities($error); ?>
+                                                    <?php echo htmlentities($error); ?>
                                                 </div>
                                             <?php } ?>
                                         </div>

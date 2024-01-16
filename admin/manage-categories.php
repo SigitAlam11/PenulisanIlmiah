@@ -8,13 +8,7 @@ if (strlen($_SESSION['login']) == 0) {
     if ($_GET['action'] == 'del' && $_GET['rid']) {
         $id = intval($_GET['rid']);
         $query = mysqli_query($con, "update tblcategory set Is_Active='0' where id='$id'");
-        $msg = "Category deleted ";
-    }
-    // Code for Forever deletionparmdel
-    if ($_GET['action'] == 'parmdel' && $_GET['rid']) {
-        $id = intval($_GET['rid']);
-        $query = mysqli_query($con, "delete from  tblcategory  where id='$id'");
-        $delmsg = "Category deleted forever";
+        $msg = "Category Berhasil Dihapus ";
     }
 
 ?>
@@ -64,12 +58,7 @@ if (strlen($_SESSION['login']) == 0) {
                             <div class="col-sm-6">
                                 <?php if ($msg) { ?>
                                     <div class="alert alert-success" role="alert">
-                                        <strong>Well done!</strong> <?php echo htmlentities($msg); ?>
-                                    </div>
-                                <?php } ?>
-                                <?php if ($delmsg) { ?>
-                                    <div class="alert alert-danger" role="alert">
-                                        <strong>Oh snap!</strong> <?php echo htmlentities($delmsg); ?>
+                                        <?php echo htmlentities($msg); ?>
                                     </div>
                                 <?php } ?>
                             </div>

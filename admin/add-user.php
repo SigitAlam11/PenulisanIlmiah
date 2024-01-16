@@ -14,9 +14,9 @@ if (strlen($_SESSION['login']) == 0) {
         $query = mysqli_query($con, "INSERT INTO tbladmin (AdminUserName, AdminPassword, AdminEmailId, Is_Active) VALUES ('$username', '$password', '$email', '$status')");
 
         if ($query) {
-            $msg = "User created successfully.";
+            $msg = "Akun Berhasil Ditambahkan";
         } else {
-            $error = "Something went wrong. Please try again.";
+            $error = "Terdapat Kesalahan, Silahkan Ulangi Proses!";
         }
     }
 }
@@ -78,14 +78,12 @@ if (strlen($_SESSION['login']) == 0) {
                                         <!---Success Message--->
                                         <?php if ($msg) { ?>
                                             <div class="alert alert-success" role="alert">
-                                                <strong>Well done!</strong>
                                                 <?php echo htmlentities($msg); ?>
                                             </div>
                                         <?php } ?>
                                         <!---Error Message--->
                                         <?php if ($error) { ?>
                                             <div class="alert alert-danger" role="alert">
-                                                <strong>Oh snap!</strong>
                                                 <?php echo htmlentities($error); ?>
                                             </div>
                                         <?php } ?>

@@ -11,9 +11,9 @@ if (strlen($_SESSION['login']) == 0) {
         $description = $_POST['description'];
         $query = mysqli_query($con, "Update  tblcategory set CategoryName='$category',Description='$description' where id='$catid'");
         if ($query) {
-            $msg = "Category Updated successfully ";
+            $msg = "Category Berhasil Diperbaharui ";
         } else {
-            $error = "Something went wrong . Please try again.";
+            $error = "Terdapat Kesalahan, silahkan lakukan kembali!";
         }
     }
 
@@ -74,13 +74,13 @@ if (strlen($_SESSION['login']) == 0) {
                                             <!---Success Message--->
                                             <?php if ($msg) { ?>
                                                 <div class="alert alert-success" role="alert">
-                                                    <strong>Well done!</strong> <?php echo htmlentities($msg); ?>
+                                                    <?php echo htmlentities($msg); ?>
                                                 </div>
                                             <?php } ?>
                                             <!---Error Message--->
                                             <?php if ($error) { ?>
                                                 <div class="alert alert-danger" role="alert">
-                                                    <strong>Oh snap!</strong> <?php echo htmlentities($error); ?>
+                                                    <?php echo htmlentities($error); ?>
                                                 </div>
                                             <?php } ?>
                                         </div>

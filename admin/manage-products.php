@@ -8,7 +8,7 @@ if (strlen($_SESSION['login']) == 0) {
     if (isset($_GET['action']) && $_GET['action'] == 'del' && isset($_GET['scid'])) {
         $id = intval($_GET['scid']);
         $query = mysqli_query($con, "DELETE FROM tblproducts WHERE id='$id'");
-        $msg = "Category deleted ";
+        $msg = "Category Berhasil dihapus";
     }
 }
 
@@ -69,6 +69,13 @@ if (strlen($_SESSION['login']) == 0) {
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                            <div class="col-sm-6">
+                                <?php if ($msg) { ?>
+                                    <div class="alert alert-success" role="alert">
+                                        <strong>Well done!</strong> <?php echo htmlentities($msg); ?>
+                                    </div>
+                                <?php } ?>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="card-box">

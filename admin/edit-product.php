@@ -12,23 +12,21 @@ if (strlen($_SESSION['login']) == 0) {
         $price = $_POST['price'];
         $quantity = $_POST['quantity'];
 
-        $targetDir = "uploads/"; // Ganti dengan direktori tujuan Anda
-
-        // Mengunggah gambar 1
+        $targetDir = "uploads/"; 
         $originalName1 = $_FILES['picture1']['name'];
         $ext1 = pathinfo($originalName1, PATHINFO_EXTENSION);
         $picture1 = uniqid() . "." . $ext1;
         $targetFilePath1 = $targetDir . $picture1;
         move_uploaded_file($_FILES['picture1']['tmp_name'], $targetFilePath1);
 
-        // Mengunggah gambar 2
+      
         $originalName2 = $_FILES['picture2']['name'];
         $ext2 = pathinfo($originalName2, PATHINFO_EXTENSION);
         $picture2 = uniqid() . "." . $ext2;
         $targetFilePath2 = $targetDir . $picture2;
         move_uploaded_file($_FILES['picture2']['tmp_name'], $targetFilePath2);
 
-        // Mengunggah gambar 3
+      
         $originalName3 = $_FILES['picture3']['name'];
         $ext3 = pathinfo($originalName3, PATHINFO_EXTENSION);
         $picture3 = uniqid() . "." . $ext3;
@@ -38,9 +36,9 @@ if (strlen($_SESSION['login']) == 0) {
         $query = mysqli_query($con, "UPDATE tblproducts SET name='$name', description='$description', price='$price', quantity='$quantity', picture1='$picture1', picture2='$picture2', picture3='$picture3' WHERE id='$catid'");
 
         if ($query) {
-            $msg = "Product updated";
+            $msg = "Produk Berhasil Diperbaharui";
         } else {
-            $error = "Something went wrong. Please try again.";
+            $error = "Terdapat Kesalahan, Silahkan Lakukan Kembali";
         }
     }
 ?>
@@ -55,7 +53,7 @@ if (strlen($_SESSION['login']) == 0) {
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
         <!-- App title -->
-        <title>Newsportal | Edit Product</title>
+        <title>P4S Purileisa| Edit Product</title>
         <!-- Summernote css -->
         <link href="../plugins/summernote/summernote.css" rel="stylesheet" />
         <!-- Select2 -->
@@ -135,14 +133,12 @@ if (strlen($_SESSION['login']) == 0) {
                                     <!-- Success Message -->
                                     <?php if ($msg) { ?>
                                         <div class="alert alert-success" role="alert">
-                                            <strong>Well done!</strong>
                                             <?php echo htmlentities($msg); ?>
                                         </div>
                                     <?php } ?>
                                     <!-- Error Message -->
                                     <?php if ($error) { ?>
                                         <div class="alert alert-danger" role="alert">
-                                            <strong>Oh snap!</strong>
                                             <?php echo htmlentities($error); ?>
                                         </div>
                                     <?php } ?>

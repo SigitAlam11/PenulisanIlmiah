@@ -8,22 +8,8 @@ if (strlen($_SESSION['login']) == 0) {
     if ($_GET['action'] == 'del' && $_GET['cid']) {
         $id = intval($_GET['cid']);
         $query = mysqli_query($con, "delete from tbladmin where id='$id'");
-        $msg = "Category deleted ";
+        $msg = "User Berhasil Dihapus! ";
     }
-    // Code for restore
-    if ($_GET['resid']) {
-        $id = intval($_GET['resid']);
-        $query = mysqli_query($con, "update tblcategory set Is_Active='1' where id='$id'");
-        $msg = "Category restored successfully";
-    }
-
-    // Code for Forever deletionparmdel
-    if ($_GET['action'] == 'parmdel' && $_GET['cid']) {
-        $id = intval($_GET['cid']);
-        $query = mysqli_query($con, "delete from  tbladmin  where id='$id'");
-        $delmsg = "Category deleted forever";
-    }
-
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -74,13 +60,7 @@ if (strlen($_SESSION['login']) == 0) {
 
                                 <?php if ($msg) { ?>
                                     <div class="alert alert-success" role="alert">
-                                        <strong>Bagus!</strong> <?php echo htmlentities($msg); ?>
-                                    </div>
-                                <?php } ?>
-
-                                <?php if ($delmsg) { ?>
-                                    <div class="alert alert-danger" role="alert">
-                                        <strong>Oh tidak!</strong> <?php echo htmlentities($delmsg); ?>
+                                        <?php echo htmlentities($msg); ?>
                                     </div>
                                 <?php } ?>
                             </div>

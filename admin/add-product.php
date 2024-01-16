@@ -35,9 +35,9 @@ if (strlen($_SESSION['login']) == 0) {
         move_uploaded_file($_FILES['picture3']['tmp_name'], $targetFilePath3);
         $query = mysqli_query($con, "INSERT INTO tblproducts (name,description,price,quantity,picture1,picture2,picture3) values('$name','$description','$price','$quantity','$picture1','$picture2','$picture3')");
         if ($query) {
-            $msg = "Product created ";
+            $msg = "Produk Berhasil Ditambahkan";
         } else {
-            $error = "Something went wrong . Please try again.";
+            $error = "Terdapat Kesalahan, Silahkan Tambahkan Ulang!";
         }
     }
 ?>
@@ -97,13 +97,11 @@ if (strlen($_SESSION['login']) == 0) {
                                         <div class="col-sm-6">
                                             <?php if ($msg) { ?>
                                                 <div class="alert alert-success" role="alert">
-                                                    <strong>Well done!</strong>
                                                     <?php echo htmlentities($msg); ?>
                                                 </div>
                                             <?php } ?>
                                             <?php if ($error) { ?>
                                                 <div class="alert alert-danger" role="alert">
-                                                    <strong>Oh snap!</strong>
                                                     <?php echo htmlentities($error); ?>
                                                 </div>
                                             <?php } ?>

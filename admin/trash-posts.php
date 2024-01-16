@@ -10,18 +10,16 @@ if (strlen($_SESSION['login']) == 0) {
         $postid = intval($_GET['pid']);
         $query = mysqli_query($con, "update tblposts set Is_Active=1 where id='$postid'");
         if ($query) {
-            $msg = "Post restored successfully ";
+            $msg = "Berita berhasil Di Kembali di tambahkan ";
         } else {
-            $error = "Something went wrong . Please try again.";
+            $error = "Terdapat Kesalahan, Silahkan Lakukan Kembali";
         }
     }
 
-
-    // Code for Forever deletionparmdel
     if ($_GET['presid']) {
         $id = intval($_GET['presid']);
         $query = mysqli_query($con, "delete from  tblposts  where id='$id'");
-        $delmsg = "Post deleted forever";
+        $delmsg = "Berita Berhasil Dihapus";
     }
 
 ?>
@@ -80,9 +78,14 @@ if (strlen($_SESSION['login']) == 0) {
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
+                            <?php if ($msg) { ?>
+                                    <div class="alert alert-success" role="alert">
+                                        <?php echo htmlentities($msg); ?>
+                                    </div>
+                                <?php } ?>
                                 <?php if ($delmsg) { ?>
                                     <div class="alert alert-danger" role="alert">
-                                        <strong>Oh snap!</strong> <?php echo htmlentities($delmsg); ?>
+                                        <?php echo htmlentities($delmsg); ?>
                                     </div>
                                 <?php } ?>
                             </div>

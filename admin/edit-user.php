@@ -11,14 +11,13 @@ if (strlen($_SESSION['login']) == 0) {
         $password = $_POST['AdminPassword'];
         $email = $_POST['AdminEmailId'];
 
-        // Hash kata sandi menggunakan password_hash() dengan bcrypt
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
         $query = mysqli_query($con, "Update  tbladmin set AdminUserName='$username',AdminPassword='$hashedPassword', AdminEmailId='$email' where id='$catid'");
         if ($query) {
-            $msg = "Category Updated successfully ";
+            $msg = "Category Berhasil Diperbaharui ";
         } else {
-            $error = "Something went wrong . Please try again.";
+            $error = "Terdapat Kesalahan, Silahkan Ulangi Kembali!";
         }
     }
 
@@ -82,14 +81,12 @@ if (strlen($_SESSION['login']) == 0) {
                                             <!---Success Message--->
                                             <?php if ($msg) { ?>
                                                 <div class="alert alert-success" role="alert">
-                                                    <strong>Well done!</strong>
                                                     <?php echo htmlentities($msg); ?>
                                                 </div>
                                             <?php } ?>
                                             <!---Error Message--->
                                             <?php if ($error) { ?>
                                                 <div class="alert alert-danger" role="alert">
-                                                    <strong>Oh snap!</strong>
                                                     <?php echo htmlentities($error); ?>
                                                 </div>
                                             <?php } ?>
