@@ -39,12 +39,10 @@ $query = mysqli_query($con, "SELECT * FROM tblproducts");
     </nav>
 
 
-    <div class="d-flex flex-column">
+    <div class="d-flex flex-column pb-5">
         <?php while ($row = mysqli_fetch_assoc($query)) { ?>
             <div class="content-product mb-4 d-flex flex-row justify-content-center "> 
                 <div class="row container-lg">
-
-
                     <div class="col col-md-6 d-flex flex-row  align-items-center">
                         <?php
                             $carouselID = "productCarousel" . $row['id']; 

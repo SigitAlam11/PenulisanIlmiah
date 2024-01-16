@@ -237,7 +237,7 @@ include('includes/config.php');
             </div>
             <a href="./assets/images/por1.svg" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
           </div>
-          <div class="portfolio-item image-zoom mt-4">
+          <div class="portfolio-item image-zoom mt-5">
             <div class="image-zoom-wrapper">
               <img src="./assets/images/por2.svg" alt="" />
             </div>
@@ -251,7 +251,7 @@ include('includes/config.php');
             </div>
             <a href="./assets/images/por3.svg" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
           </div>
-          <div class="portfolio-item image-zoom mt-4">
+          <div class="portfolio-item image-zoom mt-5">
             <div class="image-zoom-wrapper">
               <img src="./assets/images/por4.svg" alt="" />
             </div>

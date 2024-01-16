@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
 
 <body>
   <?php include('includes/header.php'); ?>
-  <div class="container mt-3">
+  <div class="container py-5">
     <div class="row">
       <div class="col-md-8">
 
