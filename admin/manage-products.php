@@ -41,36 +41,31 @@ if (strlen($_SESSION['login']) == 0) {
 <body class="fixed-left">
     <div id="wrapper">
         <?php include('includes/topheader.php'); ?>
-        <!-- ========== Left Sidebar Start ========== -->
         <?php include('includes/leftsidebar.php'); ?>
-        <!-- ============================================================== -->
-        <!-- Start right Content here -->
-        <!-- ============================================================== -->
         <div class="content-page">
-            <!-- Start content -->
             <div class="content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="page-title-box">
-                                <h4 class="page-title">Manage Products </h4>
-                                <ol class="breadcrumb p-0 m-0">
-                                    <li>
-                                        <a href="#">Admin</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Products</a>
-                                    </li>
-                                    <li class="active">
-                                        Manage Products
-                                    </li>
-                                </ol>
-                                <div class="clearfix"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title">Manage Products </h4>
+                                        <ol class="breadcrumb p-0 m-0">
+                                        <li>
+                                            <a href="#">Admin</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Products</a>
+                                        </li>
+                                            <li class="active">
+                                            Manage Products
+                                        </li>
+                                        </ol>
+                                    <div class="clearfix"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-12">
                                 <?php if ($msg) { ?>
                                     <div class="alert alert-success" role="alert">
                                         <strong>Well done!</strong> <?php echo htmlentities($msg); ?>

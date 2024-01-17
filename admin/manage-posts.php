@@ -48,7 +48,6 @@ if (strlen($_SESSION['login']) == 0) {
             <?php include('includes/topheader.php'); ?>
             <?php include('includes/leftsidebar.php'); ?>
             <div class="content-page">
-                <!-- Start content -->
                 <div class="content">
                     <div class="container">
                         <div class="row">
