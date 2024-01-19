@@ -22,10 +22,10 @@
 
                                 <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list">
                                     <li>
-                                        <h5>Hi, Admin</h5>
+                                        <h5 style="color: black;">Hi, Admin</h5>
                                     </li>
 
-                                    <li><a href="change-password.php"><i class="ti-settings m-r-5"></i> Change Password</a></li>
+                                    <!-- <li><a href="change-password.php"><i class="ti-settings m-r-5"></i> Change Password</a></li> -->
 
                                     <li><a href="logout.php"><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                 </ul>
