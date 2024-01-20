@@ -468,7 +468,7 @@ include('includes/config.php');
           <ul>
             <li>Kalimantan Timur, Kota Samarinda</li>
             <li>(+62) 813-5200-8196</li>
-            <li>P4SPurileisa@gmail.com</li>
+            <li>P4SPurileisa@gmail.com</li> 
           </ul>
         </div>
       </div>
