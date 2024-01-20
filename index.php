@@ -13,11 +13,32 @@ include('includes/config.php');
   <title>P4S Purileisa</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="icon" href="assets/images/image 1.svg" type="image/x-icon" />
   <link rel="shortcut icon" href="assets/images/image 1.svg" type="image/x-icon" />
+  <style>
+    .float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+  </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
@@ -54,6 +75,10 @@ include('includes/config.php');
       </div>
     </div>
   </nav>
+
+  <a href="https://api.whatsapp.com/send?phone=6281352008196&text=Halo Saya ingin bertanya seputar Purileisa!" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
 
   <!-- HERO -->
   <section id="hero" class="min-vh-100 d-flex align-items-center text-center">
@@ -269,6 +294,52 @@ include('includes/config.php');
       </div>
     </div>
   </section>
+
+  <!-- Testimonial -->
+  <section id="team" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+          <div class="section-title">
+            <h1 class="display-4 fw-semibold">Testimoni</h1>
+            <div class="line"></div>
+            <p>Dalam kegiatan usaha yang kami jalankan banyak seklai terdapat kebahagiaan dan pengalamn yang terjadi</p>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+            <div class="card">
+                <img src="https://placekitten.com/800/400" class="card-img-top" alt="Testimonial Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">John Doe</h5>
+                    <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+            <div class="card">
+                <img src="https://placekitten.com/800/401" class="card-img-top" alt="Testimonial Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Jane Doe</h5>
+                    <p class="card-text">"Suspendisse potenti. Integer ac felis sit amet turpis lacinia efficitur."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+            <div class="card">
+                <img src="https://placekitten.com/800/402" class="card-img-top" alt="Testimonial Image 3">
+                <div class="card-body">
+                    <h5 class="card-title">Alice Doe</h5>
+                    <p class="card-text">"Nulla facilisi. Fusce tincidunt aliquet justo vitae posuere. Sed gravida urna vel justo hendrerit."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
   <!-- TEAM -->
   <section id="team" class="section">
